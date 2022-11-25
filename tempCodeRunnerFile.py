@@ -1,0 +1,1 @@
+query = sys.argv[0]

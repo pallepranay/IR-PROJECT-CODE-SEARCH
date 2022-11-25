@@ -1,0 +1,548 @@
+Index: 300
+#include <stdio.h>
+#include <algorithm>
+using namespace std;
+int a[105];
+bool cmp(int x, int y) { return x > y; }
+int main() {
+    int n, pos;
+    scanf("%d", &n);
+    scanf("%d", &pos);
+    int temp = pos;
+    int cnt(0), ans(0);
+    for (int i = 1; i < n; i++) {
+        scanf("%d", &a[i]);
+        if (a[i] > pos) ans += a[i], cnt++;
+    }
+    if (cnt == 0) printf("0\n");
+    ans += pos;
+    ans /= (cnt + 1);
+    ans++;
+    printf("%d\n", ans - temp);
+    return 0;
+}
+Cosine Similarity: 1.0000000000000002
+--------------------------------------------------
+Index: 386
+#include <stdio.h>
+#include <algorithm>
+using namespace std;
+int a[105];
+bool cmp(int x, int y) { return x > y; }
+int main() {
+    int n, pos;
+    scanf("%d", &n);
+    scanf("%d", &pos);
+    int temp = pos;
+    int cnt(0), ans(0);
+    for (int i = 1; i < n; i++) {
+        scanf("%d", &a[i]);
+        if (a[i] > pos) ans += a[i], cnt++;
+    }
+    if (cnt == 0) printf("0\n");
+    else {
+        ans += pos;
+        ans /= (cnt + 1);
+        ans++;
+        printf("%d\n", ans - temp);
+    }
+    return 0;
+}
+Cosine Similarity: 0.9989770587444932
+--------------------------------------------------
+Index: 363
+#include <cmath>
+#include <ctime>
+#include <iostream>
+#include <string>
+#include <vector>
+#include<cstdio>
+#include<sstream>
+#include<algorithm>
+#include<cstdlib>
+#include<cstring>
+#include<map>
+#include<set>
+#include<queue>
+#include<cctype>
+
+using namespace std;
+
+
+struct sort_pred{
+
+    bool operator() (const int left, const int right){
+
+        return left > right ;
+
+    }
+
+
+};
+
+int main(){
+
+    int n;
+    cin >> n;
+    vector<int> v;
+    int a;
+
+    for (int i = 0; i < n; i++) {
+        int num;
+        cin >> num;
+        v.push_back(num);
+        if (i == 0) a = num;
+    }
+
+    sort(v.begin(), v.end(), sort_pred());
+    
+    if (v[0] == a) cout << 0 << endl;
+
+    else {
+
+        int pos;
+        for (int i = 0; i < n; i++) if (v[i] == a) {
+            pos = i;
+            break;
+        }
+
+        int count = 0; 
+        while (pos > 0){
+
+            if (v[pos] >= v[pos - 1]) {
+
+                swap(v[pos], v[pos - 1]);
+                pos--;
+            }
+
+            else {
+
+                int s = v[pos - 1] - v[pos];
+                count = (s % 2 == 0) ?count +  (s / 2) : count + s / 2 + 1;
+                
+                v[pos] += count;
+                v[pos - 1] -= count;
+                swap(v[pos], v[pos - 1]);
+                pos--;
+
+
+            }
+        
+        }
+
+        cout << count << endl;
+    }
+
+
+    return 0;
+}
+Cosine Similarity: 0.6504374591002108
+--------------------------------------------------
+Index: 475
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<long int> v;
+    long int x,n,i,pos,count=0;
+    long int e;
+    cin>>n;
+    cin>>x;
+    n--;
+    while(n--)
+    {
+
+        cin>>e;
+        v.push_back(e);
+    }
+
+    while(1)
+    {
+        e=INT_MIN;
+       for(i=0;i<v.size();i++)
+       {
+          if(v[i]>e)
+          {e=v[i];
+          pos=i;
+          }
+       }
+ if(x>v[pos])
+        break;
+         x++;
+       v[pos]--;
+       count++;
+
+    }
+
+    cout<<count;
+
+    return 0;
+}
+Cosine Similarity: 0.5892958442465717
+--------------------------------------------------
+Index: 239
+#include<cstdio>
+#include<cstring>
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+int main()
+{
+    int n;
+    int a[101];
+    while(~scanf("%d",&n))
+    {
+        memset(a,0,sizeof(a));
+        int maxn=-1;
+        int pos=0;
+        for(int i=1; i<=n; i++)
+        {
+            scanf("%d",&a[i]);
+            if(a[i]>=maxn)
+            {
+                maxn=a[i];
+                pos=i;
+            }
+        }
+        if(pos==1)
+        {
+            printf("0\n");
+            continue;
+        }
+        int b[101]= {0};
+        int cnt=0;
+        for(int i=2; i<=n; i++)
+            b[cnt++]=a[i];
+        sort(b,b+cnt);
+        int num=a[1];
+        while(1)
+        {
+            if(b[cnt-1]>=num)
+            {
+                b[cnt-1]--;
+                num++;
+            }
+            sort(b,b+cnt);
+            if(num>b[cnt-1])
+                break;
+        }
+        printf("%d\n",num-a[1]);
+
+    }
+    return 0;
+}
+Cosine Similarity: 0.5890996141381868
+--------------------------------------------------
+Index: 153
+#include <cstdio>
+#include <vector>
+
+using namespace std;
+
+const int nmax = 4000;
+
+int a[nmax+5][nmax+5];
+vector <int> v[nmax+5];
+
+int find_smallest(int x, int y)
+{
+ int pos = -1;
+ int Min = 2000000000;
+ for(int i=0; i<v[x].size(); i++)
+  if(v[x][i]!=y)
+   if(a[v[x][i]][y])
+   {
+    if(v[v[x][i]].size()<Min)
+    {
+     Min = v[v[x][i]].size();
+     pos = v[x][i];
+    }
+   }
+ return pos;
+}
+
+int main()
+{
+ //freopen("test.in", "r", stdin);
+ int n, m;
+ scanf("%d%d", &n, &m);
+ for(int i=0; i<m; i++)
+ {
+  int x, y;
+  scanf("%d%d", &x, &y);
+  a[x][y] = true;
+  a[y][x] = true;
+  v[x].push_back(y);
+  v[y].push_back(x);
+ }
+ int ans = 2000000000;
+ bool ok = false;
+ for(int i=1; i<=n; i++)
+ {
+  for(int j=0; j<v[i].size(); j++)
+  {
+   int pos = find_smallest(i, v[i][j]);
+   if(pos!=-1)
+   {
+    ok = true;
+    int Deg = v[i].size() + v[v[i][j]].size() + v[pos].size() - 6;
+    ans = min(ans, Deg);
+   }
+  }
+ }
+ if(!ok)printf("-1\n");
+ else printf("%d\n", ans);
+    return 0;
+}
+Cosine Similarity: 0.558569504487413
+--------------------------------------------------
+Index: 100
+#include <cstdio>
+#include <vector>
+
+using namespace std;
+
+const int nmax = 4000;
+
+int a[nmax+5][nmax+5];
+vector <int> v[nmax+5];
+
+int find_smallest(int x, int y)
+{
+ int pos = -1;
+ int Min = 2000000000;
+ for(int i=0; i<v[x].size(); i++)
+  if(v[x][i]!=y)
+   if(a[v[x][i]][y])
+   {
+    if(v[v[x][i]].size()<Min)
+    {
+     Min = v[v[x][i]].size();
+     pos = v[x][i];
+    }
+   }
+ return pos;
+}
+
+int main()
+{
+ freopen("test.in", "r", stdin);
+ int n, m;
+ scanf("%d%d", &n, &m);
+ for(int i=0; i<m; i++)
+ {
+  int x, y;
+  scanf("%d%d", &x, &y);
+  a[x][y] = true;
+  a[y][x] = true;
+  v[x].push_back(y);
+  v[y].push_back(x);
+ }
+ int ans = 2000000000;
+ bool ok = false;
+ for(int i=1; i<=n; i++)
+ {
+  for(int j=0; j<v[i].size(); j++)
+  {
+   int pos = find_smallest(i, v[i][j]);
+   if(pos!=-1)
+   {
+    ok = true;
+    int Deg = v[i].size() + v[v[i][j]].size() + v[pos].size() - 6;
+    ans = min(ans, Deg);
+   }
+  }
+ }
+ if(!ok)printf("-1\n");
+ else printf("%d\n", ans);
+    return 0;
+}
+Cosine Similarity: 0.558569504487413
+--------------------------------------------------
+Index: 330
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+ int n;
+ cin >> n;
+ int mx = 0;
+ int f ;
+ cin >> f;
+ int arr[111];
+ int pos = 0;
+ for(int i = 0; i < n - 1 ;i++)
+ {
+  int x;
+  cin >> x;
+  arr[i] = x;
+  if(arr[i] > mx)
+  {
+   mx = arr[i];
+   pos = i;
+  }
+  
+ }
+ if(f > mx)
+ {
+  cout << 0 << endl;
+  return 0;
+ }
+ int cnt =0;  
+ int m = mx;
+
+ while(f <= m)
+ {
+  if(m >= f)
+  {
+   cnt++;
+   int t = arr[pos];
+   arr[pos]--;
+   m--;
+   f++;
+  }
+  for(int i = 1 ; i < n ;i++)
+  {
+   if(arr[i] > m)
+   {
+    m = arr[i];
+    pos = i;
+   }
+  }  
+ }
+ cout << cnt << endl;
+ return 0;
+}
+Cosine Similarity: 0.5312665775886138
+--------------------------------------------------
+Index: 752
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+ int n;
+ cin >> n;
+ int mx = 0;
+ int f ;
+ cin >> f;
+ int arr[111];
+ int pos = 0;
+ for(int i = 1; i < n  ;i++)
+ {
+  int x;
+  cin >> x;
+  arr[i] = x;
+  if(arr[i] > mx)
+  {
+   mx = arr[i];
+   pos = i;
+  }
+  
+ }
+ if(f > mx)
+ {
+  cout << 0 << endl;
+  return 0;
+ }
+ int cnt =0;  
+ int m = mx;
+
+ while(f <= m)
+ {
+  if(m >= f)
+  {
+   cnt++;
+   int t = arr[pos];
+   arr[pos]--;
+   m--;
+   f++;
+  }
+  for(int i = 1 ; i < n ;i++)
+  {
+   if(arr[i] > m)
+   {
+    m = arr[i];
+    pos = i;
+   }
+  }  
+ }
+ cout << cnt << endl;
+ return 0;
+}
+Cosine Similarity: 0.5312665775886138
+--------------------------------------------------
+Index: 506
+#include<cstdio>
+#include<cstdlib>
+#include<cstdlib>
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int n;
+int a[1006];
+int b[1006];
+int cmp(int a,int b)
+{
+    return a>b;
+}
+int main()
+{
+    while(~scanf("%d",&n))
+    {
+        for(int i=0; i<n; i++)
+            scanf("%d",&a[i]);
+        int cnt=0;
+        for(int i=1; i<n; i++)
+        {
+            if(a[0]<=a[i])
+            {
+                b[cnt++]=a[i];
+            }
+        }
+        sort(b,b+cnt,cmp);
+//        for(int i=0;i<cnt;i++)
+//        {
+//            printf("%d ",b[i]);
+//        }
+        int sum=0;
+        for(int i=0; i<cnt; i++)
+        {
+            sum+=b[i];
+        }
+        if(cnt==0)
+            printf("0\n");
+        else
+        {
+            sum+=a[0];
+            sum=sum/(cnt+1)+1;
+            int ans=sum-a[0];
+            int temp=0;
+            for(int i=0;i<cnt;i++)
+            {
+                while(b[i]>=sum&&temp<ans)
+                {
+                    temp++;
+                    b[i]--;
+                    if(temp==ans)
+                        break;
+                }
+            }
+            for(int i=0;i<cnt;i++)
+            {
+                if(b[i]>=sum)
+                {
+                    ans+=1;
+                    break;
+                }
+            }
+            printf("%d\n",ans);
+        }
+    }
+}
+Cosine Similarity: 0.5248928156654744
+--------------------------------------------------

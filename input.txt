@@ -1,0 +1,33 @@
+\n #include <stdio.h> \n
+\n #include <algorithm> \n
+\n using namespace std; \n
+\n int a[105]; \n
+\n bool cmp(int x, int y) { return x > y; } \n
+\n int main() {\n
+\n    int n, pos; \n
+\n    scanf("%d", &n); \n
+\n   scanf("%d", &pos); \n
+\n    int temp = pos; \n
+\n    int cnt(0), ans(0); \n
+\n    for (int i = 1; i < n; i++) { \n
+\n        scanf("%d", &a[i]); \n
+\n        if (a[i] > pos) ans += a[i], cnt++; \n
+\n    } \n
+\n    if (cnt == 0) printf("0\n"); \n
+\n    ans += pos; \n
+\n    ans /= (cnt + 1); \n
+\n    ans++; \n
+\n    printf("%d\n", ans - temp); \n
+\n    return 0; \n
+\n }\n
+
+
+
+    
+    
+    
+
+        
+
+   
+
