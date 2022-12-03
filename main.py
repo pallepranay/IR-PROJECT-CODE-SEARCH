@@ -49,6 +49,7 @@ cosine_sim = cosine_sim(query, tfidf, tfidf_transformed_vector)
 top_results = get_top_results(data, cosine_sim)
 print(top_results)
 
+
 # Acessing Relevance
 
 # relevence_feedback = input(

@@ -30,30 +30,48 @@ def cosine_sim(query, vectorizer, tfidf_transformed):
 
 # add feedback to the top results
 import random
+import pandas as pd
 
+def read_csv():
+    return pd.read_csv('D://Temp//IR-PROJECT-CODE-SEARCH//data//feedback.csv')
+    
 def get_top_results(data, score):
     top_results = score.argsort()[::-1]
-    results = {"Code": [], "Similarity": [] , "feedback": []}
+    results = {"Code": [], "Similarity": [] , "feedback": [] , "index": [] }
+    df = read_csv()
+    # read df and add feedback to the top results
+    for i in top_results[:10]:
+        # print(i)
+        if df.loc[df['index'] == i].empty:
+            results["feedback"].append(0)
+        else:
+            results["feedback"].append(df.loc[df['index'] == i, 'feedback'].values[0])
+    
+    max_feedback = max(results["feedback"])==0 and 1 or max(results["feedback"])
+    # for i in range (len(results["feedback"])): 
+    #     results["feedback"][i] = ((results["feedback"][i]/ max_feedback)*60 + (results["Similarity"][i])*40)
+    
     for idx in top_results[:10]:
         results["Code"].append(data.iloc[idx]["source_original"])
         results["Similarity"].append(score[idx])
-        results["feedback"].append(random.randint(0, 10))
-        
-    # for i in range(len(results["Code"])):
-    #     print("before: ", results["feedback"][i])
-    # sort dictionary by feedback array
-    results["Code"] = [x for _, x in sorted(
-        zip(results["feedback"], results["Code"]), reverse=True)]
-    results["Similarity"] = [x for _, x in sorted(
-        zip(results["feedback"], results["Similarity"]), reverse=True)]
+        results["index"].append(idx)
+        # results["feedback"][idx] = results["feedback"][idx]/max_feedback*60 + results["Similarity"][idx]*40
+    for i in range (len(results["feedback"])):
+        results["feedback"][i] = ((results["feedback"][i]/ max_feedback)*60 + (results["Similarity"][i])*40)
+
+    results["Code"] = [x for _, x in sorted(zip(results["feedback"], results["Code"]), reverse=True)]
+    results["Similarity"] = [x for _, x in sorted(zip(results["feedback"], results["Similarity"]), reverse=True)]
+    results["index"] = [x for _, x in sorted(zip(results["feedback"], results["index"]), reverse=True)]
     results["feedback"] = sorted(results["feedback"], reverse=True)
-    
-    # for i in range(len(results["Code"])):
-        # print("after: ", results["feedback"][i])
+
+    for i in range(len(results["Code"])):
+        print("after: ", results["feedback"][i])
         
+    print('--------------------------------------------------')
+                
     results_str = ""
     for i in range(10):
-        results_str += "Index: " + str(top_results[i]) + "\n" + \
+        results_str += "Index: " + str(results["index"][i]) + "\n" + \
             results["Code"][i] + "\n" + "Cosine Similarity: " + \
             str(results["Similarity"][i]) + "\n"
         results_str = results_str + "-"*50 + "\n"
@@ -63,26 +81,3 @@ def get_top_results(data, score):
         file.writelines(results_str)
 
     return results_str
-
-
-#                              testing.....
-
-# def get_top_results(data, score):
-#     top_results = score.argsort()[::-1]
-#     results = {"Code": [], "Similarity": []}
-#     for idx in top_results[:10]:
-#         results["Code"].append(data.iloc[idx]["source_original"])
-#         results["Similarity"].append(score[idx])
-
-#     results_str = ""
-#     for i in range(10):
-#         results_str += "Index: " + str(top_results[i]) + "\n" + \
-#             results["Code"][i] + "\n" + "Cosine Similarity: " + \
-#             str(results["Similarity"][i]) + "\n"
-#         results_str = results_str + "-"*50 + "\n"
-
-#     print(results_str)
-#     with open("data/results.txt", "w") as file:
-#         file.writelines(results_str)
-
-#     return results_str

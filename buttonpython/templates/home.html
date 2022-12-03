@@ -264,16 +264,18 @@
         <h4 style="text-align: center; margin-top: 50px;">Top10 Similar Codes:</h4>
 
         {% for code in data1 %}
+        {% with code as code %}
         <div>
-            <div id={{forloop.counter0}} style="margin-top: 50px;color: aliceblue;overflow-wrap: break-word;background-color: #9c2f82;width: 70vw; max-width: 70vw; margin-left: 200px; padding: 80px;">
+            <div id='{{code.0}}' style="margin-top: 50px;color: aliceblue;overflow-wrap: break-word;background-color: #9c2f82;width: 70vw; max-width: 70vw; margin-left: 200px; padding: 80px;">
                 <!-- button with inline css  -->
-                <button style = 'background-color: #777777' onclick="CopyToClipboard({{forloop.counter0}})" class="btn btn-dark">Copy</button>
-                <button style = 'background-color: #777777' onclick="send()" class="btn btn-dark">Copy</button>
+                <button style = 'background-color: #777777' onclick="CopyToClipboard('{{code.0}}'); send('{{code.0}}');" class="btn btn-dark">Copy</button>
+                <!-- <button style = 'background-color: #777777' onclick="send()" class="btn btn-dark">Copy</button> -->
                 {% for clines in code %}
                 <p style="font-size: 10px;">{{clines}}</p>
                 {% endfor %}
             </div>
         </div>
+        {% endwith %}
         {% endfor %}
         
         <div style="margin-bottom: 50px; margin-top: 50px">
@@ -360,13 +362,16 @@
 }
 </script>
 <script>
-    function send(){
-        var x =  '1';
+    function send(val){
+        window.CSRF_TOKEN = "{{ csrf_token }}";
+        // convert val to string
+        var val = val.toString();
         // use ajax ans send the data to the server
         $.ajax({
-            url: '/external/send/',
+            url: '/send/',
             type: 'POST',
-            data: x,
+            data: {csrfmiddlewaretoken: window.CSRF_TOKEN,
+                    param: val},
             success: function(response){
                 console.log(response);
             },
