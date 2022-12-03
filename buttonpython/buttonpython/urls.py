@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.button),
     path('output', views.output, name="script"),
     path('external/', views.external),
+    path('external/send', views.external, name="external"),
 ]
