@@ -247,9 +247,6 @@
                     <textarea name="param" id="" cols="50" rows="7" placeholder="Search Code...." required></textarea><br><br><span></span>
                 </div>
                 <input style="margin-left: 320px;" type="submit" value="Execute Query" class="btn btn-secondary">
-
-
-
             </form>
 
         </div>
@@ -265,11 +262,19 @@
 
     <div>
         <h4 style="text-align: center; margin-top: 50px;">Top10 Similar Codes:</h4>
-        
-        <div style="margin-top: 50px;color: aliceblue;overflow-wrap: break-word;background-color: #9c2f82;width: 70vw; max-width: 70vw; margin-left: 200px; padding: 80px;">
-            {{data_external}}
-            {{data1}}
+
+        {% for code in data1 %}
+        <div>
+            <div id={{forloop.counter0}} style="margin-top: 50px;color: aliceblue;overflow-wrap: break-word;background-color: #9c2f82;width: 70vw; max-width: 70vw; margin-left: 200px; padding: 80px;">
+                <!-- button with inline css  -->
+                <button style = 'background-color: #777777' onclick="CopyToClipboard({{forloop.counter0}})" class="btn btn-dark">Copy</button>
+                <button style = 'background-color: #777777' onclick="send()" class="btn btn-dark">Copy</button>
+                {% for clines in code %}
+                <p style="font-size: 10px;">{{clines}}</p>
+                {% endfor %}
+            </div>
         </div>
+        {% endfor %}
         
         <div style="margin-bottom: 50px; margin-top: 50px">
             <hr>
@@ -337,5 +342,42 @@
     </div>
 
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    function CopyToClipboard(containerid) {
+  if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy");
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById(containerid));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    alert("Text has been copied, now paste in the text-area")
+  }
+}
+</script>
+<script>
+    function send(){
+        var x =  '1';
+        // use ajax ans send the data to the server
+        $.ajax({
+            url: '/external/send/',
+            type: 'POST',
+            data: x,
+            success: function(response){
+                console.log(response);
+            },
+            error: function(error){
+                console.log(error);
+            }
+        });
+    }
+</script>
+<!-- script that take button click and post the data to the server -->
+
+
 
 </html>

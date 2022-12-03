@@ -12,6 +12,7 @@ query = sys.argv[1]
 
 
 
+
 # Main file
 
 print("Loading data...")
@@ -41,6 +42,7 @@ print("Ranking and displaying outputs for the query...")
 
 print("*****Printing query*****")
 print(query)
+print('--------------------------------------------------')
 
 cosine_sim = cosine_sim(query, tfidf, tfidf_transformed_vector)
 
@@ -51,3 +53,4 @@ print(top_results)
 
 # relevence_feedback = input(
 #     "Enter the indices of relevant documents retrieved (space seperated): \n").split(" ")
+
