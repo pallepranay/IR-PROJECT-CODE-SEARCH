@@ -10,7 +10,124 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+        :root {
+            --text-color: hsla(210, 50%, 85%, 1);
+            --shadow-color: hsla(210, 40%, 52%, .4);
+            --btn-color: hsl(210, 80%, 42%);
+            --bg-color: #141218;
+        }
+
+        button {
+            position: relative;
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            font-family: "Source Code Pro";
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 15px;
+            color: var(--text-color);
+
+            background-color: var(--btn-color);
+            box-shadow: var(--shadow-color) 2px 2px 22px;
+            border-radius: 4px;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        button:focus {
+            outline-color: transparent;
+            box-shadow: var(--btn-color) 2px 2px 22px;
+        }
+
+        .right::after,
+        button::after {
+            content: var(--content);
+            display: block;
+            position: absolute;
+            white-space: nowrap;
+            padding: 40px 40px;
+            pointer-events: none;
+        }
+
+        button::after {
+            font-weight: 200;
+            top: -30px;
+            left: -20px;
+        }
+
+        .right,
+        .left {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+
+        .right {
+            left: 66%;
+        }
+
+        .left {
+            right: 66%;
+        }
+
+        .right::after {
+            top: -30px;
+            left: calc(-66% - 20px);
+
+            background-color: var(--bg-color);
+            color: transparent;
+            transition: transform .4s ease-out;
+            transform: translate(0, -90%) rotate(0deg)
+        }
+
+        button:hover .right::after {
+            transform: translate(0, -47%) rotate(0deg)
+        }
+
+        button .right:hover::after {
+            transform: translate(0, -50%) rotate(-7deg)
+        }
+
+        button .left:hover~.right::after {
+            transform: translate(0, -50%) rotate(7deg)
+        }
+
+        /* bubbles */
+        button::before {
+            content: '';
+            pointer-events: none;
+            opacity: .6;
+            background:
+                radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+                radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+                radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+            width: 100%;
+            height: 300%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            animation: bubbles 5s linear infinite both;
+        }
+
+        @keyframes bubbles {
+            from {
+                transform: translate();
+            }
+
+            to {
+                transform: translate(0, -66.666%);
+            }
+        }
+
         .bodytt {
             background: #9c2f82
         }
@@ -221,7 +338,7 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-secondary" type="submit">Search</button>
+                    <button class="btn btn-secondary" type="submit" style="padding-right: 30px;">Search</button>
                 </form>
             </div>
         </div>
@@ -236,7 +353,7 @@
     {% endif %}
     <div>
         <div style="float: left; margin-top: 100px;">
-            
+
             <form action="/external/" method="post">
                 {% csrf_token %}
                 <div style="margin-left: 200px; font-weight: bold; font-size: 18px;">
@@ -244,9 +361,10 @@
                 </div><br>
 
                 <div style="margin-left: 200px;">
-                    <textarea name="param" id="" cols="50" rows="7" placeholder="Search Code...." required></textarea><br><br><span></span>
+                    <textarea name="param" id="" cols="50" rows="7" placeholder="Search Code...."
+                        required></textarea><br><br><span></span>
                 </div>
-                <input style="margin-left: 320px;" type="submit" value="Execute Query" class="btn btn-secondary">
+                <button style="margin-left: 320px; font-weight: 500;" type="submit" value="Execute Query" class="btn btn-dark">Execute Query</button>
             </form>
 
         </div>
@@ -260,28 +378,38 @@
     </div>
     <hr>
 
-    <div>
-        <h4 style="text-align: center; margin-top: 50px;">Top10 Similar Codes:</h4>
+    <h4 style="text-align: center; margin-top: 50px; margin-bottom: 50px;">Top10 Similar Codes:</h4>
+
+    <div style="justify-content: flex-start; display: flex; flex-direction: row; flex-wrap: wrap; ">
 
         {% for code in data1 %}
         {% with code as code %}
-        <div>
-            <div id='{{code.0}}' style="margin-top: 50px;color: aliceblue;overflow-wrap: break-word;background-color: #9c2f82;width: 70vw; max-width: 70vw; margin-left: 200px; padding: 80px;">
+        <div >
+            <div id='{{code.0}}' 
+                style=" margin-top: 10px; color: aliceblue;overflow-wrap: break-word;background-color: #9c2f82;width: 28vw; max-width: 50vw; margin-left: 60px; margin-bottom: 30px; padding: 50px; ">
                 <!-- button with inline css  -->
-                <button style = 'background-color: #777777' onclick="CopyToClipboard('{{code.0}}'); send('{{code.0}}');" class="btn btn-dark">Copy</button>
+                <button style="--content: 'Copy'; margin-bottom: 30px; margin-left: 130px;"
+                    onclick="CopyToClipboard('{{code.0}}'); send('{{code.0}}');">
+                    <div class="left"></div>
+                    Copy
+                    <div class="right"></div>
+                </button>
+
+
                 <!-- <button style = 'background-color: #777777' onclick="send()" class="btn btn-dark">Copy</button> -->
-                {% for clines in code %}
-                <p style="font-size: 10px;">{{clines}}</p>
-                {% endfor %}
+
+                    {% for clines in code %}
+                    <p style="font-size: 15px; font-weight: bold; line-height: 0.5;">{{clines}}</p>
+                    {% endfor %}
             </div>
         </div>
         {% endwith %}
         {% endfor %}
-        
+
         <div style="margin-bottom: 50px; margin-top: 50px">
             <hr>
         </div>
-        
+
     </div>
 
 
@@ -299,7 +427,8 @@
                         <div class="card">
                             <div class="content">
                                 <div class="img">
-                                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQHlpU8lxWHEHg/profile-displayphoto-shrink_800_800/0/1662391340326?e=2147483647&v=beta&t=ydeP6SRvmC8Rtn4IgQCQJKPxGFGLw4ukxKvHWaa27X0" alt="">
+                                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQHlpU8lxWHEHg/profile-displayphoto-shrink_800_800/0/1662391340326?e=2147483647&v=beta&t=ydeP6SRvmC8Rtn4IgQCQJKPxGFGLw4ukxKvHWaa27X0"
+                                        alt="">
                                 </div>
                                 <div class="details">
                                     <div class="name">Palle Pranay Reddy</div>
@@ -319,7 +448,8 @@
                         <div class="card">
                             <div class="content">
                                 <div class="img">
-                                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQHlpU8lxWHEHg/profile-displayphoto-shrink_800_800/0/1662391340326?e=2147483647&v=beta&t=ydeP6SRvmC8Rtn4IgQCQJKPxGFGLw4ukxKvHWaa27X0" alt="">
+                                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQHlpU8lxWHEHg/profile-displayphoto-shrink_800_800/0/1662391340326?e=2147483647&v=beta&t=ydeP6SRvmC8Rtn4IgQCQJKPxGFGLw4ukxKvHWaa27X0"
+                                        alt="">
                                 </div>
                                 <div class="details">
                                     <div class="name">Anmol Singh</div>
@@ -332,7 +462,7 @@
                                     <a href="#"><i class="fab fa-youtube"></i></a>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
                 <div class="button">
@@ -347,22 +477,22 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
     function CopyToClipboard(containerid) {
-  if (document.selection) {
-    var range = document.body.createTextRange();
-    range.moveToElementText(document.getElementById(containerid));
-    range.select().createTextRange();
-    document.execCommand("copy");
-  } else if (window.getSelection) {
-    var range = document.createRange();
-    range.selectNode(document.getElementById(containerid));
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    alert("Text has been copied, now paste in the text-area")
-  }
-}
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select().createTextRange();
+            document.execCommand("copy");
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            alert("Text has been copied, now paste in the text-area")
+        }
+    }
 </script>
 <script>
-    function send(val){
+    function send(val) {
         window.CSRF_TOKEN = "{{ csrf_token }}";
         // convert val to string
         var val = val.toString();
@@ -370,12 +500,14 @@
         $.ajax({
             url: '/send/',
             type: 'POST',
-            data: {csrfmiddlewaretoken: window.CSRF_TOKEN,
-                    param: val},
-            success: function(response){
+            data: {
+                csrfmiddlewaretoken: window.CSRF_TOKEN,
+                param: val
+            },
+            success: function (response) {
                 console.log(response);
             },
-            error: function(error){
+            error: function (error) {
                 console.log(error);
             }
         });

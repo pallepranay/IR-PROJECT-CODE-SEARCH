@@ -33,7 +33,7 @@ import random
 import pandas as pd
 
 def read_csv():
-    return pd.read_csv('D://Temp//IR-PROJECT-CODE-SEARCH//data//feedback.csv')
+    return pd.read_csv('D://IR-PROJECT-CODE-SEARCH//data//feedback.csv')
     
 def get_top_results(data, score):
     top_results = score.argsort()[::-1]
@@ -64,10 +64,10 @@ def get_top_results(data, score):
     results["index"] = [x for _, x in sorted(zip(results["feedback"], results["index"]), reverse=True)]
     results["feedback"] = sorted(results["feedback"], reverse=True)
 
-    for i in range(len(results["Code"])):
-        print("after: ", results["feedback"][i])
+    # for i in range(len(results["Code"])):
+    #     print("after: ", results["feedback"][i])
         
-    print('--------------------------------------------------')
+    # print('--------------------------------------------------')
                 
     results_str = ""
     for i in range(10):

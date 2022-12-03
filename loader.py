@@ -25,6 +25,6 @@ def load_data():
     #     original_df.iloc[:1000].to_csv("data\cleaned_data_small.csv")
     #     original_df_small = original_df.iloc[:1000]
     # else:
-    original_df_small = pd.read_csv("D://Temp//IR-PROJECT-CODE-SEARCH//data//cleaned_data_small.csv")
+    original_df_small = pd.read_csv("D://IR-PROJECT-CODE-SEARCH//data//cleaned_data_small.csv")
     # original_df_small = pd.read_csv("data\cleaned_data_small.csv")
     return original_df_small

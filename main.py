@@ -15,21 +15,21 @@ query = sys.argv[1]
 
 # Main file
 
-print("Loading data...")
+# print("Loading data...")
 data = load_data()  # Loading the data
 
 
 data = drop_nan(data)
 # Getting the pos_index
-print("Constructing Positional Indexing...")
+# print("Constructing Positional Indexing...")
 pos_index = get_pos_index(data)
 
 
 # Vectorizing the training data
-print("Vectorizing data...")
+# print("Vectorizing data...")
 tfidf, tfidf_transformed_vector = tfidf_vectorize_data(data)
 
-print("Ranking and displaying outputs for the query...")
+# print("Ranking and displaying outputs for the query...")
 # Ranking for the given query
 
 # used for taking input from txt file
@@ -40,9 +40,9 @@ print("Ranking and displaying outputs for the query...")
 #     query = ' '.join(query)
 
 
-print("*****Printing query*****")
-print(query)
-print('--------------------------------------------------')
+# print("*****Printing query*****")
+# print(query)
+# print('--------------------------------------------------')
 
 cosine_sim = cosine_sim(query, tfidf, tfidf_transformed_vector)
 
