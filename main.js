@@ -19,7 +19,6 @@ function getdata() {
         if (err) {
             document.writeln('relevant code is: ' + err) 
         }
-
     });
 }
 
