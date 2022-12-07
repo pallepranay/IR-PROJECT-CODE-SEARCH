@@ -1,0 +1,4531 @@
+,0
+0,"
+  for ( i = 1 ; i < 20 ; i++ )
+   {
+      i = i+1;
+      printf(""%d  "", i);
+     
+   }
+"
+1,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 66_c_program_to_print_even_numbers_2_4_6_8_10_12.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+
+//clrscr();
+
+int i;
+ 
+ 
+   printf(""\nC program to print Even numbers : "");
+ 
+   for ( i = 1 ; i < 20 ; i++ )
+   {
+      i = i+1;
+      printf(""%d  "", i);
+     
+   }
+
+ //	getch(); 
+
+}"
+2,"
+   for ( i = 0 ; i < 20 ; i++ )
+   {
+      i = i+1;
+      printf(""%d  "", i);
+     
+   }
+"
+3,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 67_c_program_to_print_odd_numbers_1_3_5_7_9_11.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+
+//clrscr();
+
+int i;
+int no;
+ 
+ 
+   printf(""\nC program to print Odd numbers : "");
+ 
+   for ( i = 0 ; i < 20 ; i++ )
+   {
+      i = i+1;
+      printf(""%d  "", i);
+     
+   }
+
+ //	getch(); 
+
+}
+"
+4,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 68_c_program_to_print_sum_of_series 1 + 1/2 + 1/3 + 1/4 + ... + 1/n .c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int i,n;
+int sum_of_series = 0;
+ 
+ 
+   printf(""\nC Program to print sum of series 1 + 1/2 + 1/3 + 1/4 + .... + 1/n : \n\n "");
+ 
+   printf(""Enter the number n : "");
+   scanf(""%d"",&n);
+   
+   printf(""1 + "");
+   for ( i = 1 ; i <= n ; i++ )
+   {
+      sum_of_series = sum_of_series + i;
+      if(n != i)
+        printf(""1/%d  + "", i);
+      else
+        printf(""1/%d"",i);
+     
+   }
+   printf("" = 1/%d"",sum_of_series);
+   
+
+ //    getch(); 
+
+}
+"
+5,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 69_c_program_to_print_sum_of_series 1 + 3 + 5 + 7 + ... + n .c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+
+//clrscr();
+
+int i,n;
+int sum_of_series = 0;
+ 
+ 
+   printf(""\n C Program to print sum of series 1 + 3 + 5 + 7 + .... + n : \n\n "");
+ 
+   printf(""Enter an odd number n : "");
+   scanf(""%d"",&n);
+   
+   for ( i = 1 ; i <= n ; i=i+2 )
+   {
+
+      if((n-1)!=i)
+        printf("" %d +"",i);
+      else
+        printf("" %d "",i);
+      sum_of_series = sum_of_series + i;
+      
+     
+   }
+   
+   printf("" = %d"",sum_of_series);
+   
+
+ //    getch(); 
+
+}
+"
+6,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 70_c_program_to_print_sum_of_series 2 + 4 + 6 + 8 + ... + n .c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int i,n;
+int sum_of_series = 0;
+ 
+ 
+   printf(""\n C Program to print sum of series 2 + 4 + 6 + 8 + .... + n : \n\n "");
+ 
+   printf(""Enter an even number n : "");
+   scanf(""%d"",&n);
+   
+   for ( i = 1 ; i <= n ; i++ )
+   {
+
+        i = i+1;
+      if(n!=i)
+        printf("" %d +"",i);
+      else
+        printf("" %d "",i);
+      sum_of_series = sum_of_series + i;
+      
+     
+   }
+   
+   printf("" = %d"",sum_of_series);
+   
+
+ //    getch(); 
+
+}
+"
+7,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 71_c_program_to_find_square_root_of_a_number.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int number;
+float sqrt_rt;
+ 
+ 
+   printf(""\nC Program to find Square root of a number : \n\n"");
+ 
+   printf(""Enter a number to find Square root  : \n"");
+   scanf(""%d"",&number);
+   
+    sqrt_rt = pow(number,0.5);
+   
+   printf(""Square root of %d = %f"",number,sqrt_rt);
+   
+
+ //    getch(); 
+
+}
+"
+8,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 72_c_program_to_find_cube_root_of_a_number.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int number;
+float cube_rt;
+ 
+ 
+   printf(""\nC Program to find Cube root of a number : \n\n"");
+ 
+   printf(""Enter a number to find Cube root  : \n"");
+   scanf(""%d"",&number);
+   
+    cube_rt = pow(number,0.33334);
+   
+   printf(""Cube root of %d = %f"",number,cube_rt);
+   
+
+ //    getch(); 
+
+}"
+9,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 73_c_program_to_add_10_numbers_using_array.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int arr[10];
+int i;
+int sum=0;
+ 
+
+printf(""\nC Program to add 10 numbers using arrays : \n\n"");
+ 
+ for(i = 0; i<10;i++) {
+     
+      printf(""Enter no. %d   : \n"",i+1);
+      scanf(""%d"",&arr[i]);
+      
+    
+     
+ }
+ 
+ for(i = 0; i<10;i++) {
+     
+       sum = sum + arr[i];
+
+}
+ printf(""Sum : %d"",sum);
+ 
+//getch();  
+   
+}"
+10,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 74_c_program_to_find_max_of_10_numbers_inputted_using_array.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int arr[10];
+int i;
+int max=0;
+ 
+
+printf(""\n Enter 10 numbers : \n\n"");
+ 
+ for(i = 0; i<10;i++) {
+     
+      printf(""Enter no. %d   : \n"",i+1);
+      scanf(""%d"",&arr[i]);
+      
+    
+     
+ }
+ 
+ for(i = 0; i<10;i++) {
+     
+       if(arr[i]>=max) {
+           
+           max = arr[i];
+       }
+
+}
+ printf(""Max number : %d"",max);
+ 
+//getch();  
+   
+ }"
+11,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 75_c_program_to_find_min_of_10_numbers_inputted_using_array.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int arr[10];
+int i;
+int min;
+ 
+
+printf(""\n Enter 10 numbers : \n\n"");
+ 
+ for(i = 0; i<10;i++) {
+     
+      printf(""Enter no. %d   : \n"",i+1);
+      scanf(""%d"",&arr[i]);
+      
+    
+     
+ }
+ 
+ min = arr[0];
+ 
+ for(i = 0; i<10;i++) {
+     
+       if(arr[i]<=min) {
+           
+           min = arr[i];
+       }
+
+}
+ printf(""Min number : %d"",min);
+ 
+//getch();  
+   
+ }
+"
+12,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 76_c_program_to_find_average_of_10_numbers_inputted_using_array.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int arr[10];
+int i;
+int sum=0,avg=0;
+ 
+
+printf(""\n Enter 10 numbers : \n\n"");
+ 
+ for(i = 0; i<10;i++) {
+     
+      printf(""Enter no. %d   : \n"",i+1);
+      scanf(""%d"",&arr[i]);
+      
+     
+ }
+ 
+
+ 
+ for(i = 0; i<10;i++) {
+           
+         sum = sum + arr[i];   
+}
+
+ avg = sum/10;
+ printf(""Average : %d"",avg);
+ 
+//getch();  
+   
+ }
+"
+13,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 77_c_program_to_find_in_entered_number_is_armstrong.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+int number,temp_number,temp_var,sum,power_of_digit;
+
+//clrscr();
+
+printf(""\n Enter a 3 digit number : "");
+scanf(""%d"",&number);
+
+temp_number = number;
+
+while(temp_number >=1 ) {
+       
+      temp_var = temp_number%10; //get unit place digit
+      power_of_digit = temp_var*temp_var*temp_var; //find the power
+      sum = sum + power_of_digit; //add to sum
+      temp_number = temp_number/10; //remove the last digit
+       
+   }
+
+     
+   if(sum == number) {
+       
+       printf(""\n Entered number %d is a Armstrong Number"", number);
+   }
+   else {
+       
+        printf(""\n Entered number %d is not Armstrong Number"", number);
+   }
+   
+
+ 
+//getch();  
+   
+ }
+"
+14,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 78_c_program_to_print_armstrong_number_between_1_to_1000.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+int number,temp_number,temp_var,sum,power_of_digit,i;
+
+//clrscr();
+
+printf(""\n Armstrong number between 1 to 999"");
+
+
+
+
+for(i = 0 ; i <=1000;i++)
+{
+
+    temp_number = i;      
+    while(temp_number >=1 ) {
+      temp_var = temp_number%10; //get unit place digit
+      power_of_digit = temp_var*temp_var*temp_var; //find the power
+      sum = sum + power_of_digit; //add to sum
+      temp_number = temp_number/10; //remove the last digit
+    }    
+      
+       if(sum == i) {
+       
+       printf(""\n Entered number %d is a Armstrong Number"", i);
+        }
+  
+      sum = 0;
+       
+   }
+ 
+
+ 
+//getch();  
+   
+ }
+"
+15,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 79_c_program_to_print_armstrong_1_to_10_in_reverse_order.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+int i;
+
+//clrscr();
+
+printf(""\n Print 1 to 10 in reverse order : "");
+
+for(i=10 ; i >=1 ; i--) {
+
+       printf("" %d "", i);
+}
+ 
+ 
+//getch();  
+   
+ }"
+16,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 80_c_program_to_find_biggest_of_3_numbers_using_ternary_operator.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+int i,max;
+int arr[2];
+
+//clrscr();
+
+
+for(i=0 ; i <=2 ; i++) {
+
+       printf(""\n Enter no.%d : "", i+1);
+       scanf(""%d"",&arr[i]);
+}
+ 
+ 
+ max =  (arr[0] > arr[1]) ? (arr[0] > arr[2] ? arr[0] : arr[2]) : (arr[1] > arr[2] ? arr[1] : arr[2]) ;
+  printf(""\n Max of %d,%d,%d is :  %d "", arr[0],arr[1],arr[2],max);
+
+//getch();  
+   
+ }
+"
+17,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 84_c_program_to_read_string_and_print_on_console.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+char ch;
+
+//clrscr();
+
+printf(""Enter a String : "");
+
+while( (ch=getchar( )) !='\n')  {
+
+  putchar(ch);
+
+}
+
+//getch();  
+   
+}"
+18,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 85_c_program_to_read_sentence_in_upppercase_and_print_in_lowercase.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+char ch;
+
+//clrscr();
+
+printf(""Enter a String : "");
+
+while( (ch=getchar( )) !='\n')  {
+    
+    if(ch>=65 && ch<=90) {
+        putchar(ch+32);
+     }
+
+    else {
+        putchar(ch);
+    }
+
+
+
+}
+
+//getch();  
+   
+}"
+19,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 86_c_program_to_read_sentence_in_lowercase_and_print_in_upper.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+char ch;
+
+//clrscr();
+
+printf(""Enter a String : "");
+
+while( (ch=getchar( )) !='\n')  {
+    
+  if(ch>=97 && ch<=122) {
+    putchar(ch-32);
+    }
+    else {
+        putchar(ch);
+    }
+
+
+
+}
+
+//getch();  
+   
+}
+"
+20,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 87_c_program_to_read_sentence_in_and_swap_uppercases_lowercases.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+char ch;
+
+//clrscr();
+
+printf(""Enter a String : "");
+
+while( (ch=getchar( )) !='\n')  {
+    
+    if(ch>=65 && ch<=90) {
+        putchar(ch+32);
+     }
+     else if(ch>=97 && ch<=122) {
+    putchar(ch-32);
+    }
+    else {
+        putchar(ch);
+    }
+
+
+
+}
+
+//getch();  
+   
+}"
+21,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 87_c_program_do_display_2x2_matrix.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+int arr[2][2];
+int i,j;
+
+//clrscr();
+
+printf(""C 2x2 Matrix : "");
+
+
+//Read the elements of the 2x2 matrix
+for(i=0;i<=1;i++) {
+    
+    for(j=0;j<=1;j++) {
+        
+        printf(""\nEnter element at location %d,%d : "",i+1,j+1);
+        scanf(""%d"",&arr[i][j]);
+    }
+
+}
+
+ printf(""\n\n Entered 2x2 matrix : \n\n"");
+
+//Display the elements of 2x2 matrix
+for(i=0;i<=1;i++) {
+    
+    for(j=0;j<=1;j++) {
+        
+        printf(""%d  "",arr[i][j]);
+      
+    }
+ printf(""\n"");
+}
+
+
+//getch();  
+ 
+  
+}
+"
+22,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 88_c_program_do_display_3x3_matrix.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+int arr[3][3];
+int i,j;
+
+//clrscr();
+
+printf(""3x3 Matrix : "");
+
+
+//Read the elements of the 3x3 matrix
+for(i=0;i<=2;i++) {
+    
+    for(j=0;j<=2;j++) {
+        
+        printf(""\nEnter element at location %d,%d : "",i+1,j+1);
+        scanf(""%d"",&arr[i][j]);
+        
+         
+    }
+
+}
+ printf(""\n\n 3x3 matrix : \n\n"");
+
+
+//Read the elements of the 3x3 matrix
+for(i=0;i<=2;i++) {
+    
+    for(j=0;j<=2;j++) {
+        
+        printf(""%d  "",arr[i][j]);
+         
+    }
+    
+    printf(""\n"");
+
+}
+
+
+
+//getch();  
+   
+}"
+23,"
+/*
+ *
+ * 1000+ C programs + tutorials
+ *
+ * This is a C program to calculate
+ * sum of two numbers.
+ *
+ *
+ *
+ * 1_calculate_sum_of_two_numbers.c
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+	int num1;
+	int num2;
+	int sum;
+
+	//clrscr();
+
+	printf(""Program to calculate Sum of two numbers :  \n\n"");
+
+	printf(""Enter value of 1st number : "");
+	scanf(""%d"", &num1);
+
+	printf(""\n\nEnter value of 2st number : "");
+	scanf(""%d"", &num2);
+
+	sum = num1 + num2;
+
+	printf(""\n\n Sum of %d + %d = %d"", num1, num2, sum);
+
+	//getch();
+
+}"
+24,"
+/*
+ *
+ * 1000+ C programs + tutorials
+ *
+ * Sum of two numbers without using third variable
+ *
+ *
+ *
+ * 1_calculate_sum_of_two_numbers.c
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+	int numberA;
+	int numberB;
+
+	//clrscr();
+
+	printf(""C Program to calculate Sum of two numbers :  \n\n"");
+
+	printf(""Enter value of number A : "");
+	scanf(""%d"", &numberA);
+
+	printf(""\n\nEnter value of number B : "");
+	scanf(""%d"", &numberB);
+
+
+	printf(""\n\n Sum of %d + %d = %d"", numberA, numberB, numberA+numberB);
+
+	//getch();
+
+}"
+25,"
+/*
+ *
+ * 1000+ C programs + tutorials
+ *
+ * Sum of two numbers without using third variable
+ *
+ *
+ *
+ * 1_calculate_sum_of_two_numbers.c
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+	int numberA;
+	int numberB;
+	int numberC;
+
+	//clrscr();
+
+	printf(""C Program to calculate Sum of two numbers :  \n\n"");
+
+	printf(""Enter value of number A : "");
+	scanf(""%d"", &numberA);
+
+	printf(""\n\nEnter value of number B : "");
+	scanf(""%d"", &numberB);
+	
+	printf(""\n\nEnter value of number C : "");
+	scanf(""%d"", &numberC);
+
+
+	printf(""\n\n Sum of %d + %d + %d = %d"", numberA, numberB,numberC numberA+numberB+numberC);
+
+	//getch();
+
+}"
+26,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * This is a C program to Subtract two
+ * numbers.
+ *
+ *
+ *
+ * difference_of_two_numbers.c
+ *
+ *  Created on: Oct 20, 2014
+ *      Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int number1;
+	int number2;
+	int difference;
+
+	//clrscr();
+	printf(""Program to calculate Difference of two numbers :  \n\n"");
+
+	printf(""Enter value of 1st number : "");
+	scanf(""%d"", &number1);
+
+	printf(""\n\nEnter value of 2st number : "");
+	scanf(""%d"", &number2);
+
+	difference = number1 - number2;
+
+	printf(""\n\n Difference of %d - %d = %d"", number1, number2, difference);
+
+	//getch();
+
+
+}"
+27,"
+/*
+ *
+ * 1000+ C programs + tutorials
+ *
+ * Difference of two numbers without using third variable
+ *
+ *
+ *
+ * 2_difference_of_two_numbers.c
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+	int numberA;
+	int numberB;
+
+	//clrscr();
+
+	printf(""C Program to calculate Difference of two numbers :  \n\n"");
+
+	printf(""Enter value of number A : "");
+	scanf(""%d"", &numberA);
+
+	printf(""\n\nEnter value of number B : "");
+	scanf(""%d"", &numberB);
+
+
+	printf(""\n\n Difference of %d - %d = %d"", numberA, numberB, numberA - numberB);
+
+	//getch();
+
+}"
+28,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * This is a C program to Divide two
+ * numbers.
+ *
+ *
+ *
+ * 3_divide_two_numbers.c
+ *
+ *  Created on: Oct 20, 2014
+ *      Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int number1;
+	int number2;
+	int division;
+
+	//clrscr();
+	printf(""Program to Divide of two numbers :  \n\n"");
+
+	printf(""Enter value of 1st number : "");
+	scanf(""%d"", &number1);
+
+	printf(""\n\nEnter value of 2st number : "");
+	scanf(""%d"", &number2);
+
+	division = number1 / number2;
+
+	printf(""\n\nDivision : %d / %d = %d"", number1, number2, division);
+
+	//getch();
+
+
+}
+"
+29,"
+/*
+ *
+ * 1000+ C programs + tutorials
+ *
+ * Divide of two numbers without using third variable
+ *
+ *
+ *
+ * 3_divide_of_two_numbers.c
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+	int numberA;
+	int numberB;
+
+	//clrscr();
+
+	printf(""C Program to Divide of two numbers :  \n\n"");
+
+	printf(""Enter value of number A : "");
+	scanf(""%d"", &numberA);
+
+	printf(""\n\nEnter value of number B : "");
+	scanf(""%d"", &numberB);
+
+
+	printf(""\n\n nDivision of %d / %d = %d"", numberA, numberB, numberA / numberB);
+
+	//getch();
+
+}"
+30,"
+ /*
+ * This is a C program to Calculate
+ * the Area and Circumference of
+ * Circle
+ *
+ *
+ *
+ * 4_calculate_area_and_circumfrence_of_circle.c
+ *
+ *  Created on: Oct 20, 2014
+ *      Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int radius;
+	static float PI = 3.142;
+	float area;
+	float circumfrence;
+
+//	clrscr();
+	printf(""Program to calculate Area and Circumference of Circle :  \n\n"");
+
+	printf(""Enter the radius of Circle : "");
+	scanf(""%d"", &radius);
+
+	area = PI*radius*radius;
+
+	circumfrence = 2*PI*radius;
+
+	printf(""\n\nArea of circle with radius %d = %f  \n\n"",radius,area);
+
+
+	printf(""Circumference of circle with radius %d = %f  \n\n"",radius,circumfrence);
+
+//	getch();
+
+}
+"
+31,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 5_calculate_area_of_square.c
+ *
+ *  Created on: Oct 20, 2014
+ *      Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int side;
+	int area;
+
+//	clrscr();
+	printf(""Program to calculate Area of a Square :  \n\n"");
+
+	printf(""Enter the side of a square : "");
+	scanf(""%d"", &side);
+
+	area = side*side;
+
+
+	printf(""\n\nArea of square with side %d = %ld \n\n"",side,area);
+
+//	getch();
+
+
+}
+"
+32,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 5_calculate_area_of_square.c
+ *
+ *  Created on: Oct 20, 2014
+ *      Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int side;
+
+//	clrscr();
+	printf(""Program to calculate Area of a Square :  \n\n"");
+
+	printf(""Enter the side of a square : "");
+	scanf(""%d"", &side);
+
+	printf(""\n\nArea of square with side %d = %ld \n\n"",side,side*side);
+
+//	getch();
+
+
+}
+"
+33,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 6_calculate_area_of_rectangle.c
+ *
+ *  Created on: Oct 20, 2014
+ *      Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int length;
+    int breadth;
+	long area;
+
+//	clrscr();
+	printf("" Program to calculate Area of a Rectangle :  \n\n"");
+
+	printf("" Enter the Length of a Rectangle : "");
+	scanf(""%d"", &length);
+    
+    
+    printf(""\n\n Enter the Breadth of a Rectangle : "");
+	scanf(""%d"", &breadth);
+    
+
+	area = length*breadth;
+
+
+	printf(""\n\n Area of Rectangle with Length as %d and Breadth as %d  = %ld \n\n"",length,breadth,area);
+
+//	getch();
+
+
+}
+
+"
+34,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 6_calculate_area_of_rectangle.c
+ *
+ *  Created on: Oct 20, 2014
+ *      Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int length,breadth;
+
+//	clrscr();
+	printf("" Program to calculate Area of a Rectangle :  \n\n"");
+
+	printf("" Enter the Length of a Rectangle : "");
+	scanf(""%d"", &length);  
+    
+    printf(""\n\n Enter the Breadth of a Rectangle : "");
+	scanf(""%d"", &breadth);
+
+	printf(""\n\n Area of Rectangle with Length as %d and Breadth as %d  = %ld \n\n"",length,breadth,length*breadth);
+
+//	getch();
+
+
+}
+
+"
+35,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 7_calculate_area_of_parallelogram.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int height;
+    int breadth;
+	long area;
+
+//	clrscr();
+
+	printf("" Program to calculate Area of a Parallelogram :  \n\n"");
+
+	printf("" Enter the Length of a Parallelogram : "");
+	scanf(""%d"", &height);
+    
+    
+    printf(""\n\n Enter the Breadth of a Parallelogram : "");
+	scanf(""%d"", &breadth);
+    
+
+	area = height*breadth;
+
+
+	printf(""\n\n Area of Parallelogram with Height as %d and Breadth as %d  = %ld \n\n"",height,breadth,area);
+
+//	getch();
+
+
+}"
+36,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 8_calculate_area_of_trapezoid.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int height;
+    int b1,b2; //breadth1 and breath2
+	long area_of_trapezoid;
+
+//	clrscr();
+
+	printf("" Program to calculate Area of a Trapezoid :  \n\n"");
+
+	printf("" Enter the Height of a Trapezoid : "");
+	scanf(""%d"", &height);
+    
+    
+    printf(""\n\n Enter the Breadth1 value : "");
+	scanf(""%d"", &b1);
+    
+    
+    printf(""\n\n Enter the Breadth2 value : "");
+    scanf(""%d"", &b2);
+    
+    
+
+	area_of_trapezoid = (height/2)*(b1+b2);
+
+
+	printf(""\n\n Area of Trapezoid with Height as %d, Breadth1 as %d and Breadth2 as %d = %ld"",height,b1,b2,area_of_trapezoid);
+
+//	getch();
+
+
+}"
+37,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 10_calculate_volume_of_cylinder.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int breadth,height;
+	long volume_of_cylinder;
+
+//	clrscr();
+
+	printf("" Program to calculate Volume of a Cylinder :  "");
+
+	printf(""\n\n Enter the Breadth of Cylinder : "");
+	scanf(""%d"", &breadth);
+    
+        printf(""\n\n Enter the Height of Cylinder : "");
+	scanf(""%d"", &height);
+    
+    
+    
+	volume_of_cylinder = breadth*height;
+
+
+	printf(""\n\n Volume of Cylinder with Breadth as %d and Height as %d = %ld"",breadth,height,volume_of_cylinder);
+
+//	getch();
+
+
+}"
+38,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 11_calculate_area_of_ellipse.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int r1,r2;
+    float PI = 3.142;
+	long area_of_ellipse;
+
+//	clrscr();
+
+	printf("" Program to calculate Area of a Ellipse :  \n\n"");
+
+	printf("" Enter Radius1 of Ellipse : "");
+	scanf(""%d"", &r1);
+    
+    
+    printf(""\n\n Enter Radius2 of Ellipse : "");
+	scanf(""%d"", &r2);
+    
+    
+	area_of_ellipse = PI*r1*r2;
+
+
+	printf(""\n\n Area of Ellipse with radius1 as %d and radius2 as %d = %ld"",r1,r2,area_of_ellipse);
+
+//	getch();
+
+
+}"
+39,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 12_calculate_volume_of_pyramid.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int breadth;
+    int height;
+    float volume_of_pyramid;
+
+//	clrscr();
+
+	printf("" Program to calculate Volume of a Pyramid :  "");
+
+	printf(""\n\n Enter the Breadth of Pyramid : "");
+	scanf(""%d"", &breadth);
+    
+    printf(""\n\n Enter the Height of Pyramid : "");
+	scanf(""%d"", &height);
+    
+    
+    volume_of_pyramid = (1/3)*breadth*height;
+
+
+	printf(""\n\n Volume of Pyramid with Breadth as %d and Height as %d = %f"",breadth,height,volume_of_pyramid);
+
+//	getch();
+
+
+
+}"
+40,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 12_calculate_volume_of_cone.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int height;
+    int radius;
+    float volume_of_cone;
+    float PI = 3.142;
+
+//	clrscr();
+
+	printf("" Program to calculate Volume of a Cone :  "");
+
+	printf(""\n\n Enter the Radius of Cone : "");
+	scanf(""%d"", &radius);
+    
+    printf(""\n\n Enter the Height of Cone : "");
+	scanf(""%d"", &height);
+    
+    
+    volume_of_cone = PI*radius*radius*height;
+
+
+	printf(""\n\n Volume of Cone with Radius as %d and Height as %d = %f"",radius,height,volume_of_cone);
+
+//	getch();
+
+
+
+}"
+41,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 14_calculate_volume_of_sphere.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int radius;
+    float volume_of_sphere;
+    float PI = 3.142;
+
+//	clrscr();
+
+	printf("" Program to calculate Volume of a Sphere :  "");
+
+	printf(""\n\n Enter the Radius of Sphere : "");
+	scanf(""%d"", &radius);
+    
+    
+    
+    volume_of_sphere = (4/3)*(PI*radius*radius*radius);
+
+
+	printf(""\n\n Volume of Sphere with Radius as %d = %f"",radius,volume_of_sphere);
+
+//	getch();
+
+
+
+}"
+42,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 15_calculate_volume_of_ellipsoid.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+    int r1,r2,r3;
+    float volume_of_ellipsoid;
+    float PI = 3.142;
+
+//	clrscr();
+
+	printf("" Program to calculate Volume of a Ellipsoid :  "");
+
+	printf(""\n\n Enter the Radius 1 of Ellipsoid : "");
+	scanf(""%d"", &r1);
+    
+    printf(""\n\n Enter the Radius 2 of Ellipsoid : "");
+	scanf(""%d"", &r2);
+    
+    printf(""\n\n Enter the Radius 3 of Ellipsoid : "");
+	scanf(""%d"", &r3);
+    
+    
+    
+    volume_of_ellipsoid = (4/3)*(PI*r1*r2*r3);
+
+
+	printf(""\n\n Volume of Ellipsoid with (r1,r2,r3) as (%d,%d,%d) = %f"",r1,r2,r3,volume_of_ellipsoid);
+
+//	getch();
+
+
+}"
+43,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 15_calculate_surface_area_of_cude.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include  <conio.h>
+
+void main() {
+
+  int side;
+  long surface_area_of_cube;
+
+//	clrscr();
+
+	printf("" Program to calculate Surface Area of a Cube :  "");
+
+	printf(""\n\n Enter the Side of Cube : "");
+	scanf(""%d"", &side);
+    
+    
+    
+    surface_area_of_cube = 6*side*side;
+
+
+	printf(""\n\n Surface area of Cude with side as %d = %ld"",side,surface_area_of_cube);
+
+//	getch();
+
+
+
+/* Result :
+
+ Program to calculate Surface Area of a Cube :  
+
+ Enter the Side of Cube : 
+
+ Surface area of Cude with side as 3 = 54
+
+*/
+
+}"
+44,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 15_calculate_surface_area_of_cude.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include  <conio.h>
+
+void main() {
+
+  int side;
+  long surface_area_of_cube;
+
+//	clrscr();
+
+	printf("" Program to calculate Surface Area of a Cube :  "");
+
+	printf(""\n\n Enter the Side of Cube : "");
+	scanf(""%d"", &side);
+    
+    
+    //using pow fuction
+    surface_area_of_cube = 6*pow(side,2);
+
+
+	printf(""\n\n Surface area of Cude with side as %d = %ld"",side,surface_area_of_cube);
+
+//	getch();
+
+
+
+/* Result :
+
+ Program to calculate Surface Area of a Cube :  
+
+ Enter the Side of Cube : 
+
+ Surface area of Cude with side as 3 = 54
+
+*/
+
+}"
+45,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ *
+ * 16_calculate_surface_area_of_shpere.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+  int radius;
+  float PI = 3.142;
+  float surface_area_of_sphere;
+
+//	clrscr();
+
+	printf("" Program to calculate Surface Area of a Sphere :  "");
+
+	printf(""\n\n Enter the Radius of Sphere : "");
+	scanf(""%d"", &radius);
+    
+    
+    
+    surface_area_of_sphere = 4*PI*radius*radius;
+
+
+	printf(""\n\n Surface area of Sphere with side as %d = %lf"",radius,surface_area_of_sphere);
+
+//	getch();
+
+
+}"
+46,"
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+  int radius;
+  float PI = 3.142;
+  float surface_area_of_sphere;
+
+//	clrscr();
+
+	printf("" Program to calculate Surface Area of a Sphere :  "");
+
+	printf(""\n\n Enter the Radius of Sphere : "");
+	scanf(""%d"", &radius);
+    
+    
+    
+    surface_area_of_sphere = 4*PI*pow(radius,2);
+
+
+	printf(""\n\n Surface area of Sphere with side as %d = %lf"",radius,surface_area_of_sphere);
+
+//	getch();
+
+
+}"
+47,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 18_compute_math_calcuation_table.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+  int number;
+  int i = 0;
+
+//	clrscr();
+
+	printf("" Program to Generate Multiplication Table :  "");
+
+	printf(""\n\n Enter number to generate Multiplication Table : "");
+	scanf(""%d"", &number);
+    
+    printf(""\n\nMultiplication Table of %d : \n"",number);
+    printf(""=============================\n\n"");
+
+    for(i; i <11 ; i++) {
+        printf(""%d x %d = %ld \n\n"",i,number, i*number);
+    }
+   
+
+//	getch();
+
+
+}"
+48,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 18_compute_math_calcuation_table.c
+ *
+ * USING WHILE LOOP
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+  int number;
+  int i = 0;
+
+//    clrscr();
+
+	printf("" Program to Generate Multiplication Table :  "");
+
+	printf(""\n\n Enter number to generate Multiplication Table : "");
+	scanf(""%d"", &number);
+    
+    printf(""\n\nMultiplication Table of %d : \n"",number);
+    printf(""=============================\n\n"");
+
+   while(i!=11) {
+        printf(""%d x %d = %ld \n\n"",i,number, i*number);
+        
+        i++;
+    }
+   
+
+//	getch();
+
+
+}"
+49,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 19_degree_to_fahrenheit_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float degree,fahrenheit;
+  
+
+//	clrscr();
+
+	printf("" Program to convert Temperature Degree to Fahrenheit :  "");
+
+	printf(""\n\n Enter Temperature in Degrees  : "");
+	scanf(""%f"", °ree);
+    
+    fahrenheit = (1.8*degree)+32;
+    
+    printf(""\n\n %f Degree in Fahrenheit = :  %f  \n"",degree,fahrenheit);
+
+
+
+//	getch();
+
+
+
+}"
+50,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 21_fahrenheit_to_degree_celsius_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float degree;
+  float fahrenheit;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Temperature Fahrenheit to Degree Celsius:  "");
+
+	printf(""\n\n Enter Temperature in Fahrenheit  : "");
+	scanf(""%f"", &fahrenheit);
+    
+    degree = (fahrenheit-32)*(5/9);
+    
+    printf(""\n\n %f Fahrenheit in Degree Celsius = %f  \n"",fahrenheit,degree);
+
+
+
+//	getch();
+
+
+
+}"
+51,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 22_meter_to_feet_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include <stdio.h>
+//#include <conio.h>
+
+void main() {
+
+  float meter;
+  float feet;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Meter to Feet:  "");
+
+	printf(""\n\n Enter Length in Meters  : "");
+	scanf(""%f"", &meter);
+    
+    feet = (meter*3.26);
+    
+    printf(""\n\n %f meter in feet = %f  \n"",meter,feet);
+
+
+
+//	getch();
+
+
+
+}"
+52,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 23_feet_to_meter_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float meter;
+  float feet;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Feet to Meter:  "");
+
+	printf(""\n\n Enter Length in Feet  : "");
+	scanf(""%f"", &feet);
+    
+    meter = (feet/3.26);
+    
+    printf(""\n\n %f Feet in Meter = %f  \n"",feet,meter);
+
+
+
+//	getch();
+
+
+
+}"
+53,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 24_feet_to_cm_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float cm;
+  float feet;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Feet to Centimeter:  "");
+
+	printf(""\n\n Enter Length in Feet  : "");
+	scanf(""%f"", &feet);
+    
+    cm = (feet/3.26)*100;
+    
+    printf(""\n\n %f Feet in Meter = %f  \n"",feet,cm);
+
+
+
+//	getch();
+
+
+
+}"
+54,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 25_feet_to_mm_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float mm;
+  float feet;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Feet to Millimeter:  "");
+
+	printf(""\n\n Enter Length in Feet  : "");
+	scanf(""%f"", &feet);
+    
+    mm = (feet/3.26)*1000;
+    
+    printf(""\n\n %f Feet in Millimeter = %f  \n"",feet,mm);
+
+
+
+//	getch();
+
+
+}"
+55,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 26_kilometer_to_miles_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float km;
+  float miles;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Kilometer to Miles :  "");
+
+	printf(""\n\n Enter Length in Kilometer  : "");
+	scanf(""%f"", &km);
+    
+    miles = (0.621371*km);
+    
+    printf(""\n\n %f Kilometer in Millimeter = %f  \n"",km,miles);
+
+
+
+//	getch();
+
+
+}"
+56,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 27_yard_to_foot_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float yard;
+  float foot;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Yard to Foot :  "");
+
+	printf(""\n\n Enter Length in Yard  : "");
+	scanf(""%f"", &yard);
+    
+    foot = (3*yard);
+    
+    printf(""\n\n %f Yard in Foot = %f  \n"",yard,foot);
+
+
+
+//	getch();
+
+
+
+}"
+57,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 28_inch_to_cm_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  float inch;
+  float cm;
+  
+
+//    clrscr();
+
+	printf("" Program to convert inch to cm :  "");
+
+	printf(""\n\n Enter Length in inch  : "");
+	scanf(""%f"", &inch);
+    
+    cm = (2.54*inch);
+    
+    printf(""\n\n %f inch in cm = %f  \n"",inch,cm);
+
+
+
+//	getch();
+
+
+
+}"
+58,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 29_kb_to_mb_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  unsigned long kb;
+  unsigned long mb;
+  
+
+//    clrscr();
+
+	printf("" Program to convert Kilobyte to Megabyte :  "");
+
+	printf(""\n\n Enter Length in Kilobyte  : "");
+	scanf(""%lu"", &kb);
+    
+    mb = (kb/1024);
+    
+    printf(""\n\n %lu Kb  =  %lu Mb  \n"",kb,mb);
+
+
+
+//	getch();
+
+
+}
+"
+59,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 31_gb_to_mb_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  unsigned long gb;
+  unsigned long mb;
+  
+
+//    clrscr();
+
+    printf("" Program to convert  Gigabyte to Megabyte :  "");
+
+    printf(""\n\n Enter Length in Gigabyte  : "");
+	scanf(""%lu"", &gb);
+    
+    mb = gb*1024;
+    
+    printf(""\n\n %lu Gb  =  %lu Mb  \n"",gb,mb);
+
+
+
+//	getch();
+
+
+
+}"
+60,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 30_mb_to_kb_converter.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+  unsigned long kb;
+  unsigned long mb;
+  
+
+//    clrscr();
+
+    printf("" Program to convert  Megabyte to Kilobyte :  "");
+
+    printf(""\n\n Enter Length in Megabyte  : "");
+	scanf(""%lu"", &mb);
+    
+    kb = mb*1024;
+    
+    printf(""\n\n %lu Mb  =  %lu Kb  \n"",mb,kb);
+
+
+
+//	getch();
+
+
+}"
+61,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 32_kg_to_lbs_c_conversion.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+ float kg,lbs;
+  
+
+//    clrscr();
+
+    printf(""C Program to convert  Kilogram to Lbs (Pounds) :  "");
+
+    printf(""\n\n Enter Weight in Kilogram  : "");
+	scanf(""%f"", &kg);
+    
+    lbs = kg*2.20462;
+    
+    printf(""\n\n %f Kg  =  %f Lbs (pound) \n"",kg,lbs );
+
+
+
+//	getch();
+
+
+
+}
+"
+62,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 30_kg_to_ounce_c_program.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+ float kg,ounce;
+  
+
+//    clrscr();
+
+    printf(""C Program to convert  Kilogram to Ounce :  "");
+
+    printf(""\n\n Enter Weight in Kilogram  : "");
+	scanf(""%f"", &kg);
+    
+    ounce = kg*35.274;
+    
+    printf(""\n\n %f Kg  =  %f ounce \n"",kg,ounce );
+
+
+
+//	getch();
+
+
+
+}"
+63,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 31_pound_to_grams_c_program.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+ float pound,gram;
+  
+
+//    clrscr();
+
+    printf(""C Program to convert Pound to Gram :  "");
+
+    printf(""\n\n Enter Weight in Pounds  : "");
+	scanf(""%f"", £);
+    
+    gram = pound*453.592;
+    
+    printf(""\n\n %f Pound  =  %f Gram \n"",pound,gram );
+
+
+
+//	getch();
+
+
+}
+"
+64,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 35_calculate_total_marks_and_percentage.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int english,french,algebra,geometry,history,geography;
+   int sum;
+   float percentage;
+  
+
+//    clrscr();
+
+    printf(""C Program to Calculate total marks scored in Exams :  "");
+
+    printf(""\n\n Enter Marks Scored in English  : "");
+	scanf(""%d"", &english);
+    
+    printf(""\n\n Enter Marks Scored in French  : "");
+    scanf(""%d"", &french);
+    
+    printf(""\n\n Enter Marks Scored in Algebra  : "");
+    scanf(""%d"", &algebra);
+     
+    printf(""\n\n Enter Marks Scored in Geometry  : "");
+    scanf(""%d"", &geometry);
+    
+    printf(""\n\n Enter Marks Scored in History  : "");
+    scanf(""%d"", &history);
+    
+    printf(""\n\n Enter Marks Scored in Geography  : "");
+    scanf(""%d"", &geography);
+    
+    
+    sum = english+french+algebra+geometry+history+geography;
+    
+    percentage =  (sum*100)/600;
+    
+    printf(""\n\n Total marks scored  = %d /600"", sum );
+    
+     printf(""\n\n Percentage Scored  = %f"", percentage );
+
+
+
+//	getch();
+
+
+}
+
+"
+65,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 36_calculate_discount_amount.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   float price;
+   float discount_percentage;
+   float discount_amount;
+   float discounted_price;
+  
+
+//    clrscr();
+
+    printf(""C Program to Calculate Discount Amount :  "");
+
+    printf(""\n\n Enter Price of Item  : "");
+    scanf(""%f"", &price);
+    
+   
+    printf(""\n\n Enter Discount Percentage on Item  : "");
+    scanf(""%f"", &discount_percentage);
+    
+    
+    discount_amount = (discount_percentage*price)/100;
+    
+    discounted_price = (price-discount_amount);
+  
+    
+    printf(""\n\nDiscount amount : %f \n\n"",  discount_amount);
+    printf(""Discounted price : %f \n\n"",  discounted_price);
+  
+    
+  
+
+
+
+//	getch();
+
+
+}"
+66,"
+   temp = number_a;  //move number_a to temp variable
+   number_a = number_b; // move number_b to number_a
+   number_b = temp; //move temp that holds value of number_a to number_b"
+67,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 37_swap_two_numbers_using_temp_variable.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int number_a;
+   int number_b;
+   int temp;
+  
+
+//    clrscr();
+
+    printf(""C Program to Swap values to two variables using temp variable :  "");
+
+    printf(""\n\n Enter value for variable A  : "");
+    scanf(""%i"", &number_a);
+    
+   
+    printf(""\n\n Enter value for variable B  : "");
+    scanf(""%i"", &number_b);
+    
+     printf(""\n\n Before Swapping => Value A : %i    B : %i "",  number_a,number_b);
+     
+     
+   //Swampping logic
+   temp = number_a;
+   number_a = number_b;
+   number_b = temp;
+   
+    printf(""\n\n After Swapping => Value A : %i    B : %i "",  number_a,number_b);
+  
+
+
+//	getch();
+
+
+
+
+}"
+68,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 34_swap_two_numbers_without_using_temp_variable.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int number_a;
+   int number_b;
+  
+
+//    clrscr();
+
+    printf(""C Program to Swap values to two variables without without using temp variable :  "");
+
+    printf(""\n\n Enter value for variable A  : "");
+    scanf(""%i"", &number_a);
+    
+   
+    printf(""\n\n Enter value for variable B  : "");
+    scanf(""%i"", &number_b);
+    
+     printf(""\n\n Before Swapping => Value A : %i    B : %i "",  number_a,number_b);
+     
+     
+   //Swapping logic
+   
+   number_a = number_a + number_b;
+   number_b = number_a - number_b;
+   number_a = number_a - number_b;
+   
+    printf(""\n\n After Swapping => Value A : %i    B : %i "",  number_a,number_b);
+  
+
+
+//	getch();
+
+
+
+}"
+69,"
+while(number >=1 ) {
+       
+      temp_var = number % 10; //get unit place digit
+      rev_num = rev_num * 10+temp_var; //append above digit to reverse digit 
+      number = number / 10; //remove the last digit  
+       
+}
+"
+70,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 39_reverse_of_entered_number.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int number,rev_num,temp_var;
+  
+
+//    clrscr();
+
+    printf(""C Program to Generate reverse of a Number"");
+
+    printf(""\n\n Enter Number : "");
+    scanf(""%i"", &number);
+    
+    printf(""\n\n Number           : %i"",number);
+     
+     
+   //Logic to reverse a number
+   
+   while(number >=1 ) {
+       
+      temp_var = number%10; //get unit place digit
+      rev_num = rev_num*10+temp_var; //append above digit to reverse digit 
+      number = number/10; //remove the last digit
+       
+       
+   }
+    
+   
+printf(""\n\n  Reversed of Number : %i"", rev_num);
+    
+
+
+//	getch();
+
+
+}"
+71,"while(number >=1 ) {
+       
+      temp_var = number%10; //get unit place digit
+      sum = sum + temp_var; //add them to sum variable
+      number = number/10; //remove the last digit
+       
+   }"
+72,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 40_calculate_sum_of_digits_of_entered_number.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int number,sum = 0,temp_var;
+  
+
+//    clrscr();
+
+    printf(""C Program to Calculate sum of Digits of Entered Number"");
+
+    printf(""\n\n Enter Number : "");
+    scanf(""%i"", &number);
+    
+    printf(""\n\n Entered Number    : %i"",number);
+     
+     
+   //Logic to calculate sum
+   
+   while(number >=1 ) {
+       
+      temp_var = number%10; //get unit place digit
+      sum = sum + temp_var; //add them
+      number = number/10; //remove the last digit
+       
+       
+   }
+    
+   
+   printf(""\n\n Sum of Digits : %i"", sum);
+    
+ 
+
+//	getch();
+
+
+
+}"
+73,"
+   while(number >= 1 ) {
+       
+      temp_var = number%10; //get unit place digit
+      sum = sum + 1; //increment the digit count by 1
+      number = number/10; //remove the last digit
+       
+       
+   }"
+74,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 41_count_number_of_digits_c_program.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int number,sum,temp_var;
+  
+
+//    clrscr();
+
+    printf(""C Program to Number of digits for a Number Entered"");
+
+    printf(""\n\n Enter Number : "");
+    scanf(""%i"", &number);
+    
+    printf(""\n\n Number : %i"",number);
+     
+     
+   //Logic to calculate number of digits
+   sum = 0;
+   while(number >=1 ) {
+       
+      temp_var = number%10; //get unit place digit
+      sum = sum + 1; 
+      number = number/10; //remove the last digit
+       
+       
+   }
+
+   printf(""\n\n Total Digits : %i"", sum);
+    
+
+
+//	getch();
+
+
+
+
+}"
+75,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 37_find_greatest_number_among_3.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int n1,n2,n3;
+   int max_no;
+  
+
+//    clrscr();
+
+    printf(""C Program to Find Greatest Number amound 3 Entered Number"");
+
+    printf(""\n\n Enter Number 1: "");
+    scanf(""%i"", &n1);
+    
+    printf(""\n\n Enter Number 2: "");
+    scanf(""%i"", &n2);
+    
+     printf(""\n\n Enter Number 3: "");
+    scanf(""%i"", &n3);
+    
+
+     
+     
+   //Logic to find Greatest Number
+  
+  max_no = n1;
+  (max_no < n2) && (max_no = n2); 
+  (max_no < n3) && (max_no = n3);
+   
+   
+   
+   printf(""\n\n Greatest among Numbers %i,%i and %i : %i"",n1,n2,n3, max_no);
+    
+
+//	getch();
+
+
+
+
+}
+"
+76,"
+    if (n1 < n2)
+    {
+        if (n1 < n3) { 
+            
+            smallest_no = n1;
+            
+        }
+        
+        else {
+            
+             smallest_no = n3;
+             
+        }
+    }
+
+  else  if (n2 < n3) {
+        
+        smallest_no =  n2;
+        
+    }
+    else 
+     {
+       smallest_no = n3;
+     }
+"
+77,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 43_find_smallest_number_amoung_3.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+   int n1,n2,n3;
+   int smallest_no;
+   int temp;
+  
+
+//    clrscr();
+
+    printf(""C Program to Find Smallest Number amound 3 Entered Number"");
+
+    printf(""\n\n Enter Number 1: "");
+    scanf(""%i"", &n1);
+    
+    printf(""\n\n Enter Number 2: "");
+    scanf(""%i"", &n2);
+    
+     printf(""\n\n Enter Number 3: "");
+    scanf(""%i"", &n3);
+    
+
+     
+     
+   //Logic to find Smallest Number
+   
+
+  
+    if (n1 < n2)
+    {
+        if (n1 < n3) { 
+            
+            smallest_no = n1;
+            
+        }
+        
+        else {
+            
+             smallest_no = n3;
+             
+        }
+    }
+
+  else  if (n2 < n3) {
+        
+        smallest_no =  n2;
+        
+    }
+    else 
+     {
+       smallest_no = n3;
+     }
+   
+   
+   printf(""\n\n Smallest Among Numbers %i,%i and %i : %i"",n1,n2,n3, smallest_no);
+    
+  
+
+
+
+//	getch();
+
+
+
+}
+"
+78,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 40_check_entered_char_is_a_vowel_or_consonant.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+char ch;
+  
+
+//clrscr();
+
+    printf(""C Program to Find Entered Character is a Vowel or Consonant."");
+
+    printf(""\n\n Enter Number : "");
+    scanf(""%c"", &ch);
+
+    
+
+     
+     
+  //Logic to find Vowel/Consonant
+
+   if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+      ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ) {
+          
+         printf(""\n\n %c is a Vowel!! "",ch);
+  
+  }
+   else {
+       
+         printf(""\n\n %c is a Consonant!! "",ch);
+   }
+   
+   
+ 
+//    getch();
+
+
+
+}
+"
+79,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 40_check_entered_char_is_a_vowel_or_consonant.c
+ *
+ * Using Switch-Case
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+char ch;
+  
+
+//clrscr();
+
+    printf(""C Program to Find Entered Character is a Vowel or Consonant."");
+
+    printf(""\n\n Enter Number : "");
+    scanf(""%c"", &ch);
+
+    
+
+     
+     
+  //Logic to find Vowel/Consonant
+
+switch(ch)  {
+
+     case 'a' || 'e' || 'i' || 'o' || 'u' :
+          printf(""\n\n %c is a Vowel!! "",ch);
+     break;
+     
+    case 'A' || 'E' || 'I' || 'O' || 'U' :
+          printf(""\n\n %c is a Vowel!! "",ch);
+     break;
+     
+   default:
+       printf(""\n\n %c is a Consonant!! "",ch);
+
+}
+
+ 
+//    getch();
+
+
+
+}
+"
+80,"
+if ((year % 400 == 0) || ( ( year % 100 != 0) && (year % 4 == 0 ))) {
+       
+      //Leap year!
+   }
+   else {
+       
+       //Not a leap year!
+   }
+"
+81,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 41_Check_entered_year_is_a_leapyear.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+int year;
+  
+
+//clrscr();
+
+    printf(""C Program to Find Entered Year is a leap year or not."");
+
+    printf(""\n\n Enter Number : "");
+    scanf(""%i"", &year);
+
+    
+
+     
+     
+  //Logic to check leap year
+
+   if ((year % 400 == 0) || ( ( year % 100 != 0) && (year % 4 == 0 ))) {
+       
+       printf(""\n\n %i is a leap year!"",year);
+   }
+   else {
+       
+       printf(""\n\n %i is not a leap year!!"",year);
+   }
+   
+  
+
+//getch();
+
+
+}"
+82,"
+  for (i = 1; i <= number ; i++) {
+   
+      factorial = factorial * i;    
+      
+  }
+"
+83,"
+*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 47_Calculate_factorial_of_a_number_C_program.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+int number;
+int i;
+unsigned long factorial = 1;
+  
+
+//clrscr();
+
+    printf(""C Program Calculate Factorial of entered number."");
+
+    printf(""\n\n Enter Number : "");
+    scanf(""%i"", &number);
+
+    
+
+     
+     
+  //Logic factorial
+
+  for (i = 1; i <= number ; i++) {
+      factorial = factorial * i;    
+  }
+  
+  printf(""\n\n %d! = %lu"",number,factorial);
+    
+   
+  
+
+//getch();
+
+
+
+}"
+84,"
+  switch(day)  {
+
+     case 1:
+        //Sunday
+     break;
+     
+      case 2:
+        //Monday   
+     break;
+     
+      case 3:
+        //Tuesday
+     break;
+     
+      case 4:
+        //Wednesday
+     break; 
+     
+     case 5:
+       //Thursday
+     break;
+     
+      case 6:
+        //Friday
+     break;
+     
+      case 7:
+        //Saturday
+     break;
+     
+   default:
+        //Invalid
+
+}
+"
+85,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 43_Display_day_of_week_switch_case_C_program.c
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+int day;
+
+  
+
+//clrscr();
+
+    printf(""C Program Displays Day of Week for entered number"");
+
+    printf(""\n\n Enter Day (1-7) : "");
+    scanf(""%i"", &day);
+
+    
+  switch(day)  {
+
+     case 1:
+    printf(""\n\n The 1st day of week is : Sunday"");
+     break;
+     
+      case 2:
+    printf(""\n\n The 2nd day of week is : Monday"");
+     break;
+     
+      case 3:
+    printf(""\n\n The 3rd day of week is : Tuesday"");
+     break;
+     
+      case 4:
+    printf(""\n\n The 4th day of week is : Wednesday"");
+     break; 
+     
+     case 5:
+    printf(""\n\n The 5th day of week is : Thursday"");
+     break;
+     
+      case 6:
+    printf(""\n\n The 6th day of week is : Friday"");
+     break;
+     
+      case 7:
+    printf(""\n\n The 7th day of week is : Saturday"");
+     break;
+     
+   default:
+    printf(""Invalid input!!! ..... "");
+
+}
+    
+//getch();
+
+
+}"
+86,"if(number > 0) {
+     
+     //It is a Positive number
+        
+    }
+    else if(number < 0) {
+         
+     //It is a Negative number    
+        
+    }
+    
+    else {
+    
+      //number == 0
+      //Number is neither positive nor negative      
+  
+   }"
+87,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 49_check_entered_number_is_positive_or_negative.c
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+int number;
+
+  
+
+//clrscr();
+
+    printf(""C Program Check Entered Number is Positive or Negative"");
+
+    printf(""\n\n Enter a number : "");
+    scanf(""%i"", &number);
+
+    if(number > 0) {
+      printf(""\n\n Entered number %d is a positive number "",number);  
+        
+    }
+    else if(number < 0) {
+         printf(""\n\n Entered number %d is a negative number "",number);  
+        
+    }
+    
+    else {
+        //number == 0
+         printf(""\n\n Entered number %d is neither positive nor negative "",number);
+    }
+
+    
+//getch();
+
+
+}"
+88,"while(number >=1 ) {
+
+       temp_var = number%10; //get unit place digit 	
+    
+       // print out temp_var
+       
+       number = number/10; //remove the units place 
+
+
+}"
+89,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 50_print_individual_digits_of_entered_number.c
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+long number =0;
+int temp_var = 0;
+int i = 1;
+
+  
+
+//clrscr();
+
+    printf(""C Program to Print Individual digits of a number :-"");
+
+    printf(""\n\n Enter a number (5 digits or more) : "");
+    scanf(""%i"", &number);
+
+    while(number >=1 ) {
+
+       temp_var = number%10; //get unit place digit
+    
+       printf(""\n\n Digit at %d place => %d  "",i,temp_var);
+       number = number/10; //remove the units place 
+      
+       i++;
+
+
+}
+
+    
+//getch();
+
+
+}"
+90,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 51_c_program_to_find_greatest_among_2_numbers_using_ternary_operator
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+  int number1,number2;
+
+
+//    clrscr();
+
+	printf(""C Program to find Greatest of Two numbers using Ternary Operator :  "");
+
+	printf(""\n\n Enter number 1  : "");
+	scanf(""%d"", &number1);
+    
+    printf(""\n\n Enter number 2  : "");
+	scanf(""%d"", &number2);
+    
+   (number1 > number2) ? printf(""\n\n  %d is greater then %d"",number1,number2) : printf(""\n\n %d is greater then %d"",number2,number1);
+   
+
+//	getch();
+
+
+}"
+91,"while(number >=1 ) {
+
+       temp_var = number%10; //get unit place digit 	
+    
+       // print out temp_var
+       
+       number = number/10; //remove the units place 
+
+
+}"
+92,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 50_print_individual_digits_of_entered_number.c
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+
+
+void main() {
+
+long number =0;
+int temp_var = 0;
+int i = 1;
+
+  
+
+//clrscr();
+
+    printf(""C Program to Print Individual digits of a number :-"");
+
+    printf(""\n\n Enter a number (5 digits or more) : "");
+    scanf(""%i"", &number);
+
+    while(number >=1 ) {
+
+       temp_var = number%10; //get unit place digit
+    
+       printf(""\n\n Digit at %d place => %d  "",i,temp_var);
+       number = number/10; //remove the units place 
+      
+       i++;
+
+
+}
+
+    
+//getch();
+
+
+}"
+93,"
+ for(i = 0; i <= 10 ; i++) {
+        
+        for(j = 0; j <= i; j++) {
+            
+            printf(""* "");
+        }
+        
+        printf(""\n"");
+        
+    }"
+94,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 53_c_program_to_display_asterisk_star_sequence_1
+ *  
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+    int i = 0; //for loop1
+    
+    int j = 0; //for loop2
+
+    for(i = 0; i <= 10 ; i++) {
+        
+        for(j = 0; j <= i; j++) {
+            
+            printf(""* "");
+        }
+        
+        printf(""\n"");
+        
+    }
+
+//	getch();
+
+
+}"
+95,"
+ for(i = 0; i <= 10 ; i++) {
+        
+        for(j = 10; j >= i; j--) {
+            printf("" "");
+        
+            for(k=1; k<=1;k++)
+            {
+                printf(""*"");
+            }
+            
+        }
+        printf(""\n"");
+    }"
+96,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 54_c_program_to_display_asterisk_star_sequence_2
+ *  
+ *
+ *
+ *  Created on: Oct 20, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+    int i = 0; //for loop1
+    
+    int j = 0; //for loop2
+    
+    int k = 0; //for loop3
+
+    for(i = 0; i <= 10 ; i++) {
+        
+        for(j = 10; j >= i; j--) {
+            printf("" "");
+        
+            for(k=1; k<=1;k++)
+            {
+                printf(""*"");
+            }
+            
+        }
+        printf(""\n"");
+    }
+    
+
+//	getch();
+
+
+}"
+97,"
+ for(i = 0; i <= 10 ; i++) {
+        
+        for(j = 10; j >= i; j--) {
+            printf("" "");
+        
+            for(k=1; k<=1;k++)
+            {
+                printf(""*"");
+            }
+            
+        }
+        printf(""\n"");
+    }"
+98,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 55_c_program_to_display_asterisk_star_sequence_3
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+    int i = 0; //for loop1
+    
+    int j = 0; //for loop2
+    
+    int k = 0; //for loop3
+
+    for(i = 0; i <= 10 ; i++) {
+        
+        for(j = 10; j >= i; j--) {
+            printf("" "");
+        }
+            for(k=1; k<=i;k++)
+            {
+                printf(""*"");
+            }
+            
+        
+        printf(""\n"");
+    }
+    
+
+//	getch();
+
+
+}"
+99,"
+ for(i = 0; i <= 10 ; i++) {
+        
+        for(j = 10; j >= i; j--) {
+            printf("" "");
+        
+            for(k=1; k<=1;k++)
+            {
+                printf(""*"");
+            }
+            
+        }
+        printf(""\n"");
+    }"
+100,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 56_c_program_to_display_asterisk_star_sequence_5
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+    int i = 0; //for loop1
+    
+    int j = 0; //for loop2
+    
+    int k = 0; //for loop3
+
+    for(i = 0; i <= 11 ; i++) {
+        
+        for(j = 11; j >= i; j--) {
+            printf("" "");
+        }
+            for(k=1; k<=i*(2-1);k++)
+            {
+                printf("" * "");
+            }
+            
+        
+        printf(""\n"");
+    }
+    
+
+//	getch();
+
+
+}"
+101,"
+for(i = 10; i >=1 ;--i)
+    {
+        for(j = 0; j < 10-i ; ++j) {
+           printf(""  "");
+        }
+        
+        for(k = i; k <= (2*i-1) ;++k) {
+        
+          printf(""* "");
+          
+        }
+        
+        for(l =0; l < (i-1) ; ++l) {
+        
+         printf(""* "");   
+         
+        }
+            
+      printf(""\n"");
+        
+    }"
+102,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 56_c_program_to_display_asterisk_star_sequence_4
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+    int i = 0; //for loop1
+    
+    int j = 0; //for loop2
+    
+    int k = 0; //for loop3
+    
+    int l = 0; //for loop3
+
+  
+    for(i=10;i>=1;--i)
+    {
+        for(j=0;j<10-i;++j) {
+           printf(""  "");
+        }
+        for(k=i;k<=2*i-1;++k) {
+          printf(""* "");
+        }
+        for(l=0; l< (i-1); ++l) {
+         printf(""* "");   
+        }
+            
+        printf(""\n"");
+    }
+    
+
+//	getch();
+
+
+}"
+103,"
+  for(i=1;i<10;++i)
+    {
+        for(j=1;j<=i;++j)
+        {
+           printf(""%d "",i);
+        }
+        printf(""\n"");
+    }"
+104,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 57_c_program_to_display_half_pyramid_of_numbers_sequence_4
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+    int i = 0; //for loop1
+    
+    int j = 0; //for loop2
+
+  
+    for(i=1;i<10;++i)
+    {
+        for(j=1;j<=i;++j)
+        {
+           printf(""%d "",i);
+        }
+        printf(""\n"");
+    }
+    
+
+//	getch();
+
+
+}"
+105,"
+    for(i=1;i<10;++i)
+    {
+        for(j=1;j<=i;++j)
+        {
+           printf(""%c "",i+64);   //we print our char i+64 
+        }
+        printf(""\n"");
+    }"
+106,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 57_c_program_to_display_half_pyramid_of_alphabets_sequence_4
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+    int i = 0; //for loop1
+    
+    int j = 0; //for loop2
+
+  
+    for(i=1;i<10;++i)
+    {
+        for(j=1;j<=i;++j)
+        {
+           printf(""%c "",i+64);
+        }
+        printf(""\n"");
+    }
+    
+
+//	getch();
+
+
+}
+"
+107,"
+    for(i=1;i<10;++i)
+    {
+        for(j=1;j<=i;++j)
+        {
+           printf(""%c "",i+64);   //we print our char i+64 
+        }
+        printf(""\n"");
+    }"
+108,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 57_c_program_to_display_half_pyramid_of_alphabets_sequence_4
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include <conio.h>
+
+void main() {
+
+
+//    clrscr();
+
+   int coeff=1;
+    int i,j,k;
+
+    for(i=0;i<8;i++)
+    {
+        for(j=1;j<=8-i;j++) {
+            
+           printf(""  "");
+           
+        }
+        for(k=0; k<=i; k++)
+        {
+            if (k==0 || i==0) {
+                
+                coeff=1;
+            }
+            else {
+                
+               coeff = coeff*(i-k+1)/k;
+            }
+            
+            printf(""%4d"",coeff);
+        }
+        printf(""\n"");
+    }
+
+//	getch();
+
+
+}
+"
+109,"
+ for (i = 1; i <= rows; i++)
+  {
+    for (j = 1; j <= space; j++)
+      printf("" "");
+ 
+    space--;
+ 
+    for (k = 1; k <= 2*i-1; k++)
+      printf(""*"");
+ 
+    printf(""\n"");
+  }
+ 
+ 
+ 
+ 
+  // Display Inverted Pyramid 2
+ 
+ 
+  space = 1;
+ 
+  for (i = 1; i <= rows - 1; i++)
+  {
+    for (j = 1; j <= space; j++)
+      printf("" "");
+ 
+    space++;
+ 
+    for (k = 1 ; k <= 2*(rows-i)-1; k++)
+      printf(""*"");
+ 
+    printf(""\n"");
+  }"
+110,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 60_c_program_to_display_asterisk_star_diamond_shape_sequence_9.c
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int rows = 7;
+int space = 6;
+int i,j,k;
+
+
+
+ // Display Pyramid 1
+ 
+ 
+  for (i = 1; i <= rows; i++)
+  {
+    for (j = 1; j <= space; j++)
+      printf("" "");
+ 
+    space--;
+ 
+    for (k = 1; k <= 2*i-1; k++)
+      printf(""*"");
+ 
+    printf(""\n"");
+  }
+ 
+ 
+ 
+ 
+  // Display Inverted Pyramid 2
+ 
+ 
+  space = 1;
+ 
+  for (i = 1; i <= rows - 1; i++)
+  {
+    for (j = 1; j <= space; j++)
+      printf("" "");
+ 
+    space++;
+ 
+    for (k = 1 ; k <= 2*(rows-i)-1; k++)
+      printf(""*"");
+ 
+    printf(""\n"");
+  }
+    
+    
+    
+
+//	getch();
+
+
+}"
+111,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 61_c_program_to_display_christmas_tree_stars_9.c
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+int rows = 5;
+int space =6;
+int i,j,k;
+
+
+
+ 
+  for (i = 1; i <= rows; i++)
+  {
+    for (j = 1; j <= space; j++)
+      printf("" "");
+ 
+    space--;
+ 
+    for (k = 1; k <= 2*i-1; k++)
+      printf(""*"");
+ 
+    printf(""\n"");
+  }
+  
+rows = 7;
+space =6;
+ 
+  for (i = 1; i <= rows; i++)
+  {
+    for (j = 1; j <= space; j++)
+      printf("" "");
+ 
+    space--;
+ 
+    for (k = 1; k <= 2*i-1; k++)
+      printf(""*"");
+ 
+    printf(""\n"");
+  }
+ 
+
+        
+printf(""     **\n"");
+printf(""     **\n"");
+printf(""     **\n"");
+printf(""     **\n"");
+printf(""     **\n"");
+printf(""     **\n"");
+printf(""*************\n"");
+
+       
+
+//	getch();
+
+
+}"
+112,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 62_c_program_to_display_1_to_15_numbers_triangle_sequence_11.c
+ *  
+ *
+ *
+ *  Created on: Oct 22, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+
+  int i,j;
+  int count = 1;
+
+ 
+  for (i = 1; i <= 5; i++)
+  {
+    for (j = 1; j <= i; j++) {
+      printf("" %d "",count);
+      count++;
+ 
+  }
+  printf(""\n"");
+  }
+
+
+
+//	getch();
+
+
+}"
+113,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 63_c_program_to_display_fibonacci_series_1_to_100.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+//clrscr();
+
+ int first_no = 0;
+ int second_no = 1;
+ int next_no;
+ int i;
+ 
+ 
+   printf(""C program prints 1st 1-100 Fibonacci series : "");
+ 
+   for ( i = 0 ; i < 100 ; i++ )
+   {
+       
+      if ( i <= 1 )
+         next_no = i;
+      else
+      {
+         next_no = first_no + second_no;
+         first_no = second_no;
+         second_no = next_no;
+         
+         if(next_no > 100) {
+             break;
+         }
+      }
+      printf(""%d  "",next_no);
+   }
+
+
+
+//	getch();
+
+
+}"
+114,"
+/*
+ * 1000+ C programs + tutorials
+ *
+ * 
+ * 64_c_program_to_display_fibonacci_series_1_to_100_using_recursion_function.c
+ *  
+ *  
+ *
+ *  Created on: Oct 25, 2014
+ *  Author: Code2care.org
+ */
+
+#include 
+//#include 
+
+void main() {
+
+
+int fibo_func(int);
+
+//clrscr();
+
+int i;
+int no;
+ 
+ 
+   printf(""C program to print Fibonacci series between 1-100 using recursion : "");
+ 
+   for ( i = 0 ; i < 100 ; i++ )
+   {
+      if(fibo_func(i) > 100) {
+          break;
+      }
+      printf(""%d  "", fibo_func(i));
+     
+   }
+ //	getch(); 
+
+}
+ 
+int fibo_func(int no)
+{
+   if ( no == 0 ) {
+      return 0;
+   }
+   else if ( no == 1 ) {
+      return 1;  
+   }
+   else {
+       //Recursion
+      return ( fibo_func(no - 1) + fibo_func(no - 2) );
+   }
+} 
+
+
+
+
+"
