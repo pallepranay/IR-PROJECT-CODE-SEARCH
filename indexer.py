@@ -2,22 +2,21 @@ from modules import *
 
 # Constructing Positional Indexing
 
-def get_pos_index(data):
+def get_pos_index(d):    # used Positional Indexing for Indexing part
 
-    pos_index = {}
-    rows = data["source_tokenized"]
-
+    posiIndex = {}
+    rows = d["source_tokenized"]
     for idx, row in enumerate(rows):
         for pos, term in enumerate(row.split()):
-            if term in pos_index:
-                pos_index[term][0] = pos_index[term][0]+1
-                if idx in pos_index[term][1]:
-                    pos_index[term][1][idx].append(pos)
+            if term in posiIndex:
+                posiIndex[term][0] = posiIndex[term][0]+1
+                if idx in posiIndex[term][1]:
+                    posiIndex[term][1][idx].append(pos)
                 else:
-                    pos_index[term][1][idx] = [pos]
+                    posiIndex[term][1][idx] = [pos]
             else:
-                pos_index[term] = []
-                pos_index[term].append(1)
-                pos_index[term].append({})
-                pos_index[term][1][idx] = [pos]
-    return data
+                posiIndex[term] = []
+                posiIndex[term].append(1)
+                posiIndex[term].append({})
+                posiIndex[term][1][idx] = [pos]
+    return d

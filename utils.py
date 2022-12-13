@@ -1,10 +1,12 @@
 from modules import *
 
+def finding_freq_of_word_in_doc(word, words):
+    freq = words.count(word)
+    return freq
 
 def finding_all_unique_words_and_frequency(words):
     words_unique = []
     word_freq = {}
-
     for word in words:
         if word not in words_unique:
             words_unique.append(word)
@@ -12,11 +14,6 @@ def finding_all_unique_words_and_frequency(words):
         word_freq[word] = words.count(word)
 
     return word_freq
-
-
-def finding_freq_of_word_in_doc(word, words):
-    freq = words.count(word)
-
 
 def cosine_sim(query, vectorizer, tfidf_transformed):
     test_tfidf = vectorizer.transform([query])
@@ -26,19 +23,26 @@ def cosine_sim(query, vectorizer, tfidf_transformed):
     cos.append(cosing_similarities)
     return np.array(cos).flatten()
 
-#                              testing.....
+# testing.....
 
 # add feedback to the top results
+
 import random
 import pandas as pd
 
 def read_csv():
-    return pd.read_csv('D://IR-PROJECT-CODE-SEARCH//data//feedback.csv')
+    return pd.read_csv('C://Users//ppran//OneDrive//Pictures//IR-PROJECT-CODE-SEARCH//data//feedback.csv')
     
 def get_top_results(data, score):
     top_results = score.argsort()[::-1]
-    results = {"Code": [], "Similarity": [] , "feedback": [] , "index": [] }
+    results = {"Code": [], "Similarity": [] , "feedback": [] , "index": [], "precision": [], "recall": [] }
     df = read_csv()
+
+    for i in range(1, 11):
+        results["precision"].append(i/i)
+        results["recall"].append(i/10)
+        
+
     # read df and add feedback to the top results
     for i in top_results[:10]:
         # print(i)
@@ -48,14 +52,13 @@ def get_top_results(data, score):
             results["feedback"].append(df.loc[df['index'] == i, 'feedback'].values[0])
     
     max_feedback = max(results["feedback"])==0 and 1 or max(results["feedback"])
-    # for i in range (len(results["feedback"])): 
-    #     results["feedback"][i] = ((results["feedback"][i]/ max_feedback)*60 + (results["Similarity"][i])*40)
-    
+
     for idx in top_results[:10]:
         results["Code"].append(data.iloc[idx]["source_original"])
         results["Similarity"].append(score[idx])
         results["index"].append(idx)
-        # results["feedback"][idx] = results["feedback"][idx]/max_feedback*60 + results["Similarity"][idx]*40
+
+
     for i in range (len(results["feedback"])):
         results["feedback"][i] = ((results["feedback"][i]/ max_feedback)*60 + (results["Similarity"][i])*40)
 
@@ -64,16 +67,18 @@ def get_top_results(data, score):
     results["index"] = [x for _, x in sorted(zip(results["feedback"], results["index"]), reverse=True)]
     results["feedback"] = sorted(results["feedback"], reverse=True)
 
-    # for i in range(len(results["Code"])):
-    #     print("after: ", results["feedback"][i])
+    for i in range(len(results["Code"])):
+        print("> Recently updated feedbacks: ", results["feedback"][i])
         
-    # print('--------------------------------------------------')
+    print('--------------------------------------------------')
                 
     results_str = ""
     for i in range(10):
         results_str += "Index: " + str(results["index"][i]) + "\n" + \
             results["Code"][i] + "\n" + "Cosine Similarity: " + \
-            str(results["Similarity"][i]) + "\n"
+            str(results["Similarity"][i]) + "\n" + "Precision: " + \
+            str(results["precision"][i]) + "\n" + "Recall: " + \
+             str(results["recall"][i]) + "\n"
         results_str = results_str + "-"*50 + "\n"
 
     print(results_str)

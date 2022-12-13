@@ -1,5 +1,3 @@
-
-
 function getdata() {
     var query = document.getElementById("queryfield").value
     alert(query)
